@@ -1,0 +1,10 @@
+.container {
+    width: 100%;
+    height: calc(100vh - 121px);
+}
+
+.background {
+    display: flex;
+    padding: 50px 65px;
+    justify-content: space-evenly;
+}

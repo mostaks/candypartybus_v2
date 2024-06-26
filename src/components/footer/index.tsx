@@ -1,18 +1,14 @@
 import React from "react";
+import styles from './footer.module.css';
 
 const footer = () => {
   return (
-    <div>
+    <div className={styles.container}>
       <div
-        style={{
-          display: "flex",
-          backgroundImage: `url("/GettyImages-869077028-2880w.jpg")`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
+      className={styles.background}
       >
-        <div style={{ flexDirection: "row" }}>
-          <div style={{ marginBottom: 10 }}>Quick Links</div>
+        <div className={styles.row}>
+          <div className={styles.pink}>Quick Links</div>
           <div>Home</div>
           <div>What we offer</div>
           <div>Our busses</div>

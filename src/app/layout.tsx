@@ -8,12 +8,12 @@ import "./globals.css";
 const inter = Inter({subsets: ["latin"]});
 
 const light = localFont({
-    src: [
-        {path: './light.ttf'},
-        {path: './medium.ttf'},
-        {path: './texter.ttf'},
-    ]
-})
+  src: [
+    { path: "../../public/light.ttf" },
+    { path: "../../public/medium.ttf" },
+    { path: "../../public/texter.ttf" },
+  ],
+});
 
 export const metadata: Metadata = {
     title: "Candy Party Bus",

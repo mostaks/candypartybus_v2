@@ -1,0 +1,10 @@
+.container {
+    width: 100%;
+}
+
+.background {
+    display: flex;
+    padding: 50px 65px;
+    justify-content: space-evenly;
+    background-color: rgba(35, 0, 36, 1);
+}
