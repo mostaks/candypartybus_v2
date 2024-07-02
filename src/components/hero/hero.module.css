@@ -1,3 +1,18 @@
+@font-face {
+  font-family: texter;
+  src: url('/texter.ttf');
+}
+
+@font-face {
+  font-family: light;
+  src: url('/light.ttf');
+}
+
+@font-face {
+  font-family: medium;
+  src: url('/medium.ttf');
+}
+
 .container {
   position: relative;
   width: 100%;
@@ -16,35 +31,53 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  background: rgba(0, 0, 0, 0.5);
+  /* Dark overlay */
 }
 
 .content {
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 90%;
+  height: 600px;
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: 20px;
+  font-family: medium;
+  color: rgb(234, 31, 228);
 }
 
 .subtitle {
-  font-size: 1.5rem;
+  font-size: 7rem;
+  line-height: normal;
+  text-align: left;
+  width: 80%;
   margin-bottom: 40px;
+  color: white;
+  height: 100%;
 }
 
 .button {
-  padding: 10px 20px;
-  background-color: #ff4081; /* Pink button */
+  padding: 25px 20px;
+  background-color: rgb(234, 31, 228);
+  /* Pink button */
   color: #fff;
   text-decoration: none;
-  font-size: 1rem;
-  border-radius: 5px;
+  font-size: 1.5rem;
+  height: 100px;
+  border-radius: 50px;
   transition: background-color 0.3s;
+  font-family: medium;
+  font-weight: 400;
 }
 
 .button:hover {
-  background-color: #e60073; /* Darker pink on hover */
+  background-color: rgb(70, 197, 231);
+  color: white;
 }

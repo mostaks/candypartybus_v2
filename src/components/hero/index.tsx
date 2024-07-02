@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React, { useEffect, useState } from "react";
 import styles from "./hero.module.css";
 
@@ -22,12 +22,23 @@ const Hero = () => {
     >
       <div className={styles.overlay}></div>
       <div className={styles.content}>
-        <h1 className={styles.title}>Welcome to Candy Party Bus</h1>
-        <p className={styles.subtitle}>
-          The ultimate party experience on wheels
-        </p>
+        <img
+          style={{
+            width: "20%",
+            marginTop: 60,
+            marginBottom: 20,
+          }}
+          src={"/palm-trees.svg"}
+        />
+        <div className={styles.title}>WELCOME TO CANDY PARTY BUS:</div>
+        <div className={styles.subtitle}>
+          <span>YOUR </span>
+          <span style={{ color: "rgb(70, 197, 231)" }}>RETRO </span>
+          <span>RIDE TO EPIC MEMORIES!</span>
+        </div>
+
         <a href="/book-your-event" className={styles.button}>
-          Book Now
+          All Aboard the Candy Party Bus Express!
         </a>
       </div>
     </div>
