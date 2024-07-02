@@ -2,7 +2,7 @@ import React from "react";
 import styles from "@/app/page.module.css";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
-import Divider from "@/components/divider";
+import Divider, { SplitSide } from "@/components/divider";
 import ColumnSplit from "@/components/columnSplit";
 import Footer from "@/components/footer";
 
@@ -11,7 +11,11 @@ const page = () => {
     <main className={styles.main}>
       <Header />
       <Hero />
-      <Divider />
+      <Divider
+        splitSide={SplitSide.WeirdRight}
+        body="Candy Party Buses offer hassle-free transfers to and from airports and cruise ship terminals, ensuring you never miss a beat. Serving Sydney and surrounding areas, our commitment is simple: to provide a seamless, reliable, and comfortable travel experience."
+        cta="0434 222 343"
+      />
       <ColumnSplit
         contents={[
           {
@@ -27,7 +31,12 @@ const page = () => {
         ]}
         src="/stage-bus.jpeg"
       />
-      <Divider />
+      <Divider
+        splitSide={SplitSide.WeirdRight}
+        title="Book Your Seamless Transfer Today!"
+        body="Candy Party Buses offer hassle-free transfers to and from airports and cruise ship terminals, ensuring you never miss a beat. Serving Sydney and surrounding areas, our commitment is simple: to provide a seamless, reliable, and comfortable travel experience."
+        cta="0434 222 343"
+      />
       <Footer />
     </main>
   );

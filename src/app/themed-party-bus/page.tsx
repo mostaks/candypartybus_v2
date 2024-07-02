@@ -2,7 +2,7 @@ import React from "react";
 import styles from "@/app/page.module.css";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
-import Divider from "@/components/divider";
+import Divider, { SplitSide } from "@/components/divider";
 import ColumnSplit from "@/components/columnSplit";
 import Column from "@/components/column";
 import Footer from "@/components/footer";
@@ -12,7 +12,11 @@ const page = () => {
     <main className={styles.main}>
       <Header />
       <Hero />
-      <Divider />
+      <Divider
+        splitSide={SplitSide.WeirdRight}
+        body="Got a birthday on the horizon? Elevate the celebration with Candy Party Bus! Serving Sydney and surrounding areas, whether you're marking a milestone or simply eager to make this year's bash legendary, our party buses are your ticket to an unforgettable celebration."
+        cta="0434 222 343"
+      />
 
       <ColumnSplit
         contents={[
@@ -38,7 +42,6 @@ const page = () => {
         src="/stage-bus.jpeg"
       />
 
-      <Divider />
       <Column
         backgroundImage="/"
         title="What's Included in the Birthday Package?"
@@ -46,7 +49,12 @@ const page = () => {
 Customised playlists: Your favourite tunes set the mood for an epic celebration.
 Flexible routes: We'll take you where you want to go, ensuring the party never stops."
       />
-      <Divider />
+      <Divider
+        splitSide={SplitSide.WeirdRight}
+        title="How to Book Your Birthday Ride"
+        body="Ready to turn your birthday into an extravaganza? Contact us today to book your Candy Party Bus and celebrate in style! Serving Sydney and surrounding areas, let's create a birthday celebration that's more than just another rotation around the sun – it's an adventure!"
+        cta="0434 222 343"
+      />
       <Footer />
     </main>
   );

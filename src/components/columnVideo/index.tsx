@@ -16,14 +16,6 @@ const columnVideo = ({
   content: IMultiTextContent;
   src: string;
 }) => {
-  const BeepBoop = () => {
-    return (
-      <div>
-        <PalmTrees />
-      </div>
-    );
-  };
-
   return (
     <div className={styles.container}>
       <div className={styles.column}>

@@ -17,12 +17,19 @@ const columnSplit = ({
     <div className={styles.container}>
       <div className={styles.column}>
         <div className={styles.content}>
-          <img src={"/temp-horizon.png"} />
+          <img
+            style={{
+              width: "20%",
+              paddingTop: 60,
+              marginBottom: 20,
+            }}
+            src={"/retrowave-sunset.svg"}
+          />
           {contents.map((x) => {
             return (
               <>
-                <h2 style={{ color: "rgb(234, 31, 228)" }}>{x.title}</h2>
-                <p>{x.description}</p>
+                <div className={styles.title}>{x.title}</div>
+                <div className={styles.body}>{x.description}</div>
               </>
             );
           })}

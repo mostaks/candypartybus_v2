@@ -1,7 +1,7 @@
 import styles from "./page.module.css";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
-import Divider from "@/components/divider";
+import Divider, { SplitSide } from "@/components/divider";
 import ColumnSplit from "@/components/columnSplit";
 import ColumnVideo from "@/components/columnVideo";
 import Footer from "@/components/footer";
@@ -11,7 +11,10 @@ export default function Home() {
     <main className={styles.main}>
       <Header />
       <Hero />
-      <Divider />
+      <Divider
+        splitSide={SplitSide.WeirdRight}
+        body={`At Candy Party Bus, we're not your run-of-the-mill transport service. Imagine a party on wheels, led by seasoned rave enthusiasts, promising an unforgettable night out. We get the disappointment of lacklustre buses posing as top-notch party rides. That's where we step in – setting a new standard as the "casual professionals."`}
+      />
       <ColumnVideo
         content={{
           title: "For the Wild at Heart",
@@ -31,7 +34,11 @@ export default function Home() {
         }}
         src="/candy-bus-vid.mp4"
       />
-      <Divider />
+      <Divider
+        splitSide={SplitSide.WeirdLeft}
+        title="Unleash the Party Inside"
+        body="Our smaller 24-seat buses are perfect for intimate groups that prefer a tamer yet vibrant atmosphere. It is packed with an incredible sound system and dazzling party lights, proving that big things come in smaller packages."
+      />
       <ColumnSplit
         contents={[
           {
@@ -47,7 +54,12 @@ export default function Home() {
         ]}
         src="/stage-bus.jpeg"
       />
-      <Divider />
+      <Divider
+        splitSide={SplitSide.WeirdRight}
+        title="Ready to Ride into the '80s?"
+        body="Candy Party Bus offers more than just a ride; it's an experience. Book now for an adventure like no other! If it's fun, if it's outrageous!"
+        cta="0434 222 343"
+      />
       <Footer />
     </main>
   );

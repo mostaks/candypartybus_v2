@@ -1,10 +1,24 @@
+@font-face {
+  font-family: texter;
+  src: url('/texter.ttf');
+}
+
+@font-face {
+  font-family: light;
+  src: url('/light.ttf');
+}
+
+@font-face {
+  font-family: medium;
+  src: url('/medium.ttf');
+}
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
-  max-height: 600px;
-  
+  /* max-height: 600px; */
 }
 
 .column {
@@ -13,7 +27,6 @@
   width: 100%;
   max-width: 1200px;
   max-height: 800px;
-
 }
 
 .image {
@@ -24,15 +37,35 @@
 
 .content {
   flex: 1;
-  background-color: rgb(26, 0, 27);
+  background-image: url('/cool-wave.jpg');
+  min-height: 100%;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgba(26, 0, 27, 0.5);
   color: white;
   padding-right: 30px;
   padding-left: 30px;
   font-size: 25px;
-  font-family: 'light';
+  font-family: texter;
+  box-shadow: inset 0 0 0 2000px rgba(26, 0, 27, 0.5);
+  background-position: 75%;
 }
 
-.h2 {
-  font-family: 'texter';
+.title {
+  color: rgb(234, 31, 228);
+  font-size: 36px;
+  font-family: texter;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 40px;
 }
 
+.body {
+  font-family: light;
+  font-size: 18px;
+  color: white;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  line-height: 2;
+}

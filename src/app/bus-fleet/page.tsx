@@ -2,7 +2,7 @@ import React from "react";
 import styles from "@/app/page.module.css";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
-import Divider from "@/components/divider";
+import Divider, { SplitSide } from "@/components/divider";
 import ColumnSplit from "@/components/columnSplit";
 import Footer from "@/components/footer";
 
@@ -11,7 +11,10 @@ const page = () => {
     <main className={styles.main}>
       <Header />
       <Hero />
-      <Divider />
+      <Divider
+        splitSide={SplitSide.WeirdRight}
+        body="At Candy Party Bus, we boast a fleet ready to take your celebrations to the next level, serving Sydney and surrounding areas. From untamed groups to more intimate gatherings, our buses are designed to ensure your party never stops."
+      />
       <ColumnSplit
         contents={[
           {
@@ -27,7 +30,11 @@ const page = () => {
         ]}
         src="/stage-bus.jpeg"
       />
-      <Divider />
+      <Divider
+        splitSide={SplitSide.WeirdRight}
+        body="Contact us now to inquire about availability and book your preferred party bus for an '80s-themed adventure!"
+        cta="0434 222 343"
+      />
       <Footer />
     </main>
   );
