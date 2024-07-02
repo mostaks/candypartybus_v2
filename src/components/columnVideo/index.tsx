@@ -1,12 +1,19 @@
 import React from "react";
 import styles from "./columnVideo.module.css";
 
-const columnVideo = ({title,
-  description,
+interface IMultiTextContent {
+  title: string;
+  body: string;
+  subtitle?: string;
+  subtitleBody?: string;
+  bulletPoints?: string[];
+}
+
+const columnVideo = ({
+  content,
   src,
 }: {
-  title: string;
-  description: string;
+  content: IMultiTextContent;
   src: string;
 }) => {
   return (
@@ -16,10 +23,18 @@ const columnVideo = ({title,
           <video className={styles.videoControl} src={src} controls />
         </div>
         <div className={styles.content}>
-          <h2>{title}</h2>
-          <p>
-            {description}
-          </p>
+          <img src={"/temp-horizon.png"} />
+
+          <h2 style={{ color: "rgb(234, 31, 228)" }}>{content.title}</h2>
+          <p>{content.body}</p>
+          {content.subtitle && <h2>{content.subtitle}</h2>}
+          {content.subtitle && <p>{content.subtitleBody}</p>}
+          <ul>
+            {content.bulletPoints &&
+              content.bulletPoints.map((x) => (
+                <li style={{ lineHeight: "30px" }}>{`${x}`}</li>
+              ))}
+          </ul>
         </div>
       </div>
     </div>

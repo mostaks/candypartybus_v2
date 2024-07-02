@@ -13,9 +13,23 @@ export default function Home() {
       <Hero />
       <Divider />
       <ColumnVideo
-        title="Setting the Stage for Your Dream Party"
-        description="Our fleet of buses isn't just about getting from A to B; they're an adventure waiting to unfold. Whether it's an intimate get-together or an all-out rave, we've got your back."
-        src="/"
+        content={{
+          title: "For the Wild at Heart",
+          body: "Enter our larger-than-life 80-passenger Limo buses. Almost bulletproof and absolutely outrageous, they boast trippy interior designs, spacious dance floors with multiple poles, DJ compatibility, and an unmatched light show sound system. Did we mention the separate party lights and lasers?",
+          subtitle: `We Cater to Every Occasion`,
+          subtitleBody: `While we outline our services here, remember we're versatile! If your event isn't listed, give us a call! From birthdays and weddings to corporate events and beyond, we're your go-to party-on-wheels.`,
+          bulletPoints: [
+            "Birthday Partys",
+            "Buck's & Hens",
+            "School Formals",
+            "Weddings",
+            "Corporate Events",
+            "Airport & Cruise Ship Transfers",
+            "Music Festivals",
+            "Sporting Events",
+          ],
+        }}
+        src="/candy-bus-vid.mp4"
       />
       <Divider />
       <ColumnSplit
