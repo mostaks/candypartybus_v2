@@ -1,10 +1,50 @@
 .container {
-    width: 100%;
-    height: calc(100vh - 121px);
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('/path/to/your/background-image.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
 }
 
-.background {
-    display: flex;
-    padding: 50px 65px;
-    justify-content: space-evenly;
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #ff4081; /* Pink button */
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #e60073; /* Darker pink on hover */
 }

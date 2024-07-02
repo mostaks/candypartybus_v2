@@ -1,10 +1,45 @@
 .container {
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f8f8f8; /* Adjust background color as needed */
 }
 
-.background {
-    display: flex;
-    padding: 50px 65px;
-    justify-content: space-evenly;
-    background-color: rgba(35, 0, 36, 1);
+.column {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1200px;
+  border: 1px solid #ddd; /* Optional: Add border for better visual separation */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+  background-color: #fff; /* Background color for the column */
+}
+
+.textContent, .imageContent {
+  flex: 1;
+  padding: 20px;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.textContent h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.textContent p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.imageContent img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px; /* Optional: Add border radius for rounded corners */
 }

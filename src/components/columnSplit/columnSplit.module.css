@@ -1,9 +1,25 @@
 .container {
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-.background {
-    display: flex;
-    padding: 50px 65px;
-    justify-content: space-evenly;
+.column {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.image {
+  flex: 1;
+  padding: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  flex: 1;
+  padding: 10px;
 }

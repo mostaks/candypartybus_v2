@@ -1,10 +1,28 @@
 .container {
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-.background {
-    display: flex;
-    padding: 50px 65px;
-    justify-content: space-evenly;
-    background-color: rgba(35, 0, 36, 1);
+.column {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.video {
+  flex: 1;
+  padding: 10px;
+}
+
+.content {
+  flex: 1;
+  padding: 10px;
+}
+
+.videoControl {
+  width: 100%;
+  height: auto;
 }

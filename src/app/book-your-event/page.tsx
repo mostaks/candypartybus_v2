@@ -3,7 +3,7 @@ import styles from "@/app/page.module.css";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
 import Divider from "@/components/divider";
-import ColumnSplit from "@/components/columnSplit";
+import Form from "@/components/form";
 import Footer from "@/components/footer";
 
 const page = () => {
@@ -11,8 +11,7 @@ const page = () => {
       <main className={styles.main}>
           <Header/>
           <Hero/>
-          <Divider/>
-          <ColumnSplit/>
+          <Form />
           <Divider/>
           <Footer />
       </main>
