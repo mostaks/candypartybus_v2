@@ -1,3 +1,18 @@
+@font-face {
+  font-family: texter;
+  src: url('/texter.ttf');
+}
+
+@font-face {
+  font-family: light;
+  src: url('/light.ttf');
+}
+
+@font-face {
+  font-family: medium;
+  src: url('/medium.ttf');
+}
+
 .video {
   flex: 1;
   padding: 10px;
@@ -34,5 +49,5 @@
   padding-right: 30px;
   padding-left: 30px;
   font-size: 25px;
-  font-family: 'light';
+  font-family: texter;
 }
