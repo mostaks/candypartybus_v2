@@ -1,110 +1,132 @@
 .container {
-  width: 100%;
-  background-color: #000; /* Black background */
-  color: #fff; /* White text */
-  padding: 20px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000; /* Ensure it stays above other content */
+    width: 100%;
+
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 0 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it stays above other content */
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: rgba(35, 0, 36, 1); /* Adjust as needed */
-  max-width: 75%;
-  margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(35, 0, 36, 1); /* Adjust as needed */
+    max-width: 75%;
+    margin: 0 auto;
+    height: 140px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
 
 .logo {
-  height: 50px; /* Adjust as needed */
+    height: 140px; /* Adjust as needed */
+    padding: 10px 20px;
+}
+
+.headerText {
+    padding: 10px 20px;
+    height: 140px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
 }
 
 .headerText a {
-  font-size: 24px;
-  font-weight: bold;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .callToAction {
-  background-color: rgba(234, 31, 228, 1); /* Adjust as needed */
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
+    cursor: pointer;
+    height: 140px;
+    background-color: rgba(234, 31, 228, 1);
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 0 0 5px 0;
+    width: 20%;
+    font-size: 24px;
+    line-height: 1.5;
 }
 
 .background {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
 }
 
 .nav {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .nav a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px;
-  text-transform: uppercase;
-  padding: 10px 15px;
-  transition: background-color 0.3s;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
 }
 
 .nav .dropdownToggle {
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px;
-  text-transform: uppercase;
-  padding: 10px 15px;
-  transition: background-color 0.3s;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
 }
 
 .nav .dropdownToggle:hover {
-  background-color: #ff4081; /* Pink background on hover */
+    background-color: #ff4081; /* Pink background on hover */
 }
 
 .dropdownToggle {
-  cursor: pointer;
-  position: relative;
+    cursor: pointer;
+    position: relative;
 }
 
 .dropdownMenu {
-  position: absolute;
-  background-color: #000;
-  padding: 10px;
-  border: 1px solid #fff;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
+    position: absolute;
+    background-color: #000;
+    padding: 10px;
+    border: 1px solid #fff;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
 }
 
 .dropdownMenu a {
-  display: block;
-  padding: 10px;
-  white-space: nowrap;
+    display: block;
+    padding: 10px;
+    white-space: nowrap;
 }
 
 .dropdownMenu a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .socialIcons {
-  display: flex;
-  gap: 15px;
+    display: flex;
+    gap: 15px;
 }
 
 .socialIcons div {
-  cursor: pointer;
-  font-size: 20px;
+    cursor: pointer;
+    font-size: 20px;
 }
