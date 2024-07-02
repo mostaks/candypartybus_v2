@@ -47,6 +47,7 @@ export default function Home() {
         ]}
         src="/stage-bus.jpeg"
       />
+      <Divider />
       <Footer />
     </main>
   );

@@ -16,6 +16,14 @@ const columnVideo = ({
   content: IMultiTextContent;
   src: string;
 }) => {
+  const BeepBoop = () => {
+    return (
+      <div>
+        <PalmTrees />
+      </div>
+    );
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.column}>
@@ -23,13 +31,26 @@ const columnVideo = ({
           <video className={styles.videoControl} src={src} controls />
         </div>
         <div className={styles.content}>
-          <img src={"/temp-horizon.png"} />
-
-          <h2 style={{ color: "rgb(234, 31, 228)" }}>{content.title}</h2>
-          <p>{content.body}</p>
-          {content.subtitle && <h2>{content.subtitle}</h2>}
-          {content.subtitle && <p>{content.subtitleBody}</p>}
-          <ul>
+          <img
+            style={{
+              width: "25%",
+              marginTop: 60,
+              marginBottom: 20,
+            }}
+            src={"/palm-trees.svg"}
+          />
+          <div className={styles.title}>{content.title}</div>
+          <div className={styles.body}>{content.body}</div>
+          {content.subtitle && (
+            <div className={styles.title}>{content.subtitle}</div>
+          )}
+          {content.subtitle && (
+            <div className={styles.body}>{content.subtitleBody}</div>
+          )}
+          <ul
+            className={styles.body}
+            style={{ marginTop: 20, paddingLeft: 50 }}
+          >
             {content.bulletPoints &&
               content.bulletPoints.map((x) => (
                 <li style={{ lineHeight: "30px" }}>{`${x}`}</li>
