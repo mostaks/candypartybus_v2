@@ -2,11 +2,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./hero.module.css";
 
-const images = [
-  "/path/to/your/background-image1.jpg",
-  "/path/to/your/background-image2.jpg",
-  "/path/to/your/background-image3.jpg",
-];
+const images = ["/home/hero-1.jpg", "/home/hero-2.jpg", "/home/hero-3.jpg"];
 
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

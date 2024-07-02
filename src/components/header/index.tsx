@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./header.module.css";
 import Link from "next/link";
 
@@ -37,39 +37,87 @@ const socialLinks = [
 
 const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };
 
+  const handleScroll = () => {
+    if (window.scrollY > 40) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    console.log("HELLO");
+    document.addEventListener("scroll", () => console.log('HELLO'));
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className={styles.container}>
+      <div className={`${isScrolled ? styles.hidden : styles.header}`}>
+        <Link href="/">
+          <img src="/candy-logo-bus.webp" alt="Logo" className={styles.logo} />
+        </Link>
+        <div className={styles.headerText}>
+          Our Location
+          <br />
+          <a
+            href="https://www.google.com/maps/place/Sydney+NSW/@-33.8472349,150.6023383,10z/data=!3m1!4b1!4m6!3m5!1s0x6b129838f39a743f:0x3017d681632a850!8m2!3d-33.8688197!4d151.2092955!16zL20vMDZ5NTc?entry=ttu"
+            rel="noopener noreferer"
+            target="_blank"
+          >
+            Serving Sydney and Surrounding Areas
+          </a>
+        </div>
+        <a href="tel:+1234567890" className={styles.callToAction}>
+          Call Us Now
+        </a>
+      </div>
       <div className={styles.background}>
         <div className={styles.nav}>
-          {routes.map((item, index) => (
-            <div key={index} className={styles.nav}>
-              {item.items ? (
-                <div className={styles.dropdownToggle} onClick={toggleDropdown}>
-                  {item.name}
-                  {dropdownOpen && (
-                    <div className={styles.dropdownMenu}>
-                      {item.items.map((subItem) => (
-                        <Link
-                          className={styles.nav}
-                          key={subItem.name}
-                          href={subItem.path}
-                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <Link href={item.path}>{item.name}</Link>
-              )}
-            </div>
-          ))}
+          {routes.map(
+            (
+              item: {
+                name: string;
+                path: string;
+                items?: { name: string; path: string }[];
+              },
+              index
+            ) => (
+              <div key={index} className={styles.nav}>
+                {item.items ? (
+                  <div
+                    className={styles.dropdownToggle}
+                    onClick={toggleDropdown}
+                  >
+                    {item.name}
+                    {dropdownOpen && (
+                      <div className={styles.dropdownMenu}>
+                        {item.items.map((subItem) => (
+                          <Link
+                            className={styles.nav}
+                            key={subItem.name}
+                            href={subItem.path}
+                          >
+                            {subItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link href={item.path}>{item.name}</Link>
+                )}
+              </div>
+            )
+          )}
         </div>
         <div className={styles.socialIcons}>
           {socialLinks.map((item, index) => (

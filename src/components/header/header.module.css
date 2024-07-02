@@ -3,6 +3,40 @@
   background-color: #000; /* Black background */
   color: #fff; /* White text */
   padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(35, 0, 36, 1); /* Adjust as needed */
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.logo {
+  height: 50px; /* Adjust as needed */
+}
+
+.headerText a {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.callToAction {
+  background-color: rgba(234, 31, 228, 1); /* Adjust as needed */
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
 .background {
