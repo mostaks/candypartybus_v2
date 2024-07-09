@@ -1,8 +1,25 @@
+
+@font-face {
+  font-family: texter;
+  src: url('/texter.ttf');
+}
+
+@font-face {
+  font-family: light;
+  src: url('/light.ttf');
+}
+
+@font-face {
+  font-family: medium;
+  src: url('/medium.ttf');
+}
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
+  height: 300px;
 }
 
 .column {
@@ -15,4 +32,6 @@
 .content {
   flex: 1;
   padding: 10px;
+  color: white;
+  font-family: light;
 }

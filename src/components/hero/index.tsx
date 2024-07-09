@@ -15,6 +15,13 @@ interface IHeroConfig {
 
 const configItems: IHeroConfig[] = [
   {
+    path: "/",
+    title: "",
+    backgroundImage: "",
+    useLogo: true,
+    showCTA: true,
+  },
+  {
     path: "/about-us",
     title: "ABOUT CANDY PARTY BUS",
     backgroundImage: "about-us.jpg",
@@ -70,6 +77,20 @@ const configItems: IHeroConfig[] = [
     title:
       "AIRPORT & CRUISE SHIP TRANSFERS: SEAMLESS TRAVEL WITH CANDY PARTY BUSES",
     backgroundImage: "harbor.jpg",
+    useLogo: false,
+    showCTA: false,
+  },
+  {
+    path: "/bus-fleet",
+    title: "DISCOVER OUR PARTY BUS FLEET IN SYDNEY",
+    backgroundImage: "cool-wave.jpg",
+    useLogo: false,
+    showCTA: false,
+  },
+  {
+    path: "/gallery",
+    title: "VIEW OUR PHOTOS AND VIDEOS",
+    backgroundImage: "woah.jpg",
     useLogo: false,
     showCTA: false,
   },

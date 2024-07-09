@@ -1,3 +1,18 @@
+@font-face {
+    font-family: texter;
+    src: url('/texter.ttf');
+}
+
+@font-face {
+    font-family: light;
+    src: url('/light.ttf');
+}
+
+@font-face {
+    font-family: medium;
+    src: url('/medium.ttf');
+}
+
 .container {
     width: 100%;
 }
@@ -21,8 +36,29 @@
 
 .row {
     flex-direction: row;
+    font-size: 20px;
+    color: white;
+    font-family: light;
 }
 
 .pink {
     color: #ea1fe4;
+    font-size: 20px;
+    font-family: texter;
+    padding-bottom: 20px;
+}
+
+.item {
+    padding-bottom: 20px;
+}
+
+.itemBolder {
+    padding-bottom: 20px;
+    font-weight: 600;
+}
+
+.boohoo {
+    font-size: 10px;
+    color: white;
+    font-family: light;
 }
