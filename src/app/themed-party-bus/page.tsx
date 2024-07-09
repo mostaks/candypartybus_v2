@@ -21,22 +21,28 @@ const page = () => {
       <ColumnSplit
         contents={[
           {
-            title: "Setting the Stage for Your Dream Party",
-            description: `Ultimate Party on Wheels:
-
-              Our buses are more than transportation; they're the party! Neon lights, booming sound systems, and dance floors await you and your friends.
-  
-              Customised Experiences:
-  
-              Every birthday is unique, so why settle for an average celebration? We tailor the experience to your preferences, from music choices to route planning.
-  
-              Unmatched Vibes:
-  
-              We'll whisk you around town, hitting the hottest spots while keeping the party alive inside the bus.
-  
-              Safety First, Fun Always:
-  
-              Our professional crew ensures a safe and enjoyable ride so you can focus on celebrating without worry.`,
+            title: "Why Choose Candy Party Bus for Your Birthday Bash?",
+            description: "",
+          },
+          {
+            title: "Ultimate Party on Wheels:",
+            description:
+              "Every birthday is unique, so why settle for an average celebration? We tailor the experience to your preferences, from music choices to route planning.",
+          },
+          {
+            title: " Customised Experiences:",
+            description:
+              "Our buses are more than transportation; they're the party! Neon lights, booming sound systems, and dance floors await you and your friends.",
+          },
+          {
+            title: "Unmatched Vibes:",
+            description:
+              "We'll whisk you around town, hitting the hottest spots while keeping the party alive inside the bus.",
+          },
+          {
+            title: "Safety First, Fun Always:",
+            description:
+              "Our professional crew ensures a safe and enjoyable ride so you can focus on celebrating without worry.",
           },
         ]}
         src="/stage-bus.jpeg"

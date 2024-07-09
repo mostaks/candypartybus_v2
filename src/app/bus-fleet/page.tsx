@@ -5,6 +5,7 @@ import Hero from "@/components/hero";
 import Divider, { SplitSide } from "@/components/divider";
 import ColumnSplit from "@/components/columnSplit";
 import Footer from "@/components/footer";
+import Column from "@/components/column";
 
 const page = () => {
   return (
@@ -18,18 +19,21 @@ const page = () => {
       <ColumnSplit
         contents={[
           {
-            title: "Setting the Stage for Your Dream Party",
+            title: "80 Passenger Full-Size Limo Party Bus",
             description:
-              "Our fleet of buses isn't just about getting from A to B; they're an adventure waiting to unfold. Whether it's an intimate get-together or an all-out rave, we've got your back.",
-          },
-          {
-            title: "Party Bus Services That Make Us Stand Out",
-            description:
-              "One-Way & Return: Whether it's a single ride or a round trip, our service ensures you're at your destination on time. Drive-Around: Need the bus to be the party? Cruise around town, stop for refreshments, and keep the celebration going – all within the safety of our buses.",
+              "Get ready for the ultimate party experience! Our soon-to-arrive 80-passenger full-size limo party bus is a marvel on wheels. Decked out with a completely covered, trippy interior design, a sprawling dance floor adorned with multiple dance poles, and DJ compatibility, this bus is primed for the wildest celebrations. The rear wall hosts an insane light show sound system and bespoke party lights/lasers, creating an atmosphere unlike any other party bus for hire. ",
           },
         ]}
         src="/stage-bus.jpeg"
       />
+      <Column
+        title="24-Seater Mini Party Bus"
+        description="Our 24-seater mini-party bus is the perfect choice for smaller yet equally vibrant groups. This bus has been crafted from the inside out to cater to your party needs, featuring laser lights, a booming sound system, and a trippy interior design. Don’t be fooled by its size—the sound system might be too big for a bus this size! Party lights and lasers elevate the atmosphere, ensuring your celebration is unforgettable.
+
+Whether you’re seeking the grandeur of our forthcoming 80-passenger marvel or the intimacy of our 24-seater mini-party bus, Candy Party Bus guarantees an electrifying ride for your group."
+        backgroundImage=""
+      />
+      <div style={{ paddingTop: 100 }} />
       <Divider
         splitSide={SplitSide.WeirdRight}
         body="Contact us now to inquire about availability and book your preferred party bus for an '80s-themed adventure!"
