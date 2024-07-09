@@ -1,22 +1,27 @@
+"use client";
 import React from "react";
 import styles from "@/app/page.module.css";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
 import Footer from "@/components/footer";
+import ReactImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
 
-const images = [
-  {
-    original: "cheers.jpg",
-    thumbnail: "cheers.jpg",
-  },
-];
+let images = [];
+
+for (var i = 1; i <= 31; i++) {
+  images.push({
+    original: `/photos/${i}.jpg`,
+    thumbnail: `/photos/${i}.jpg`,
+  });
+}
 
 const page = () => {
   return (
     <main className={styles.main}>
       <Header />
       <Hero />
-
+      <ReactImageGallery items={images} autoPlay={true} />
       <Footer />
     </main>
   );
