@@ -5,6 +5,7 @@ import Hero from "@/components/hero";
 import Divider, { SplitSide } from "@/components/divider";
 import ColumnSplit from "@/components/columnSplit";
 import Footer from "@/components/footer";
+import Column from "@/components/column";
 
 const page = () => {
   return (
@@ -19,17 +20,34 @@ const page = () => {
       <ColumnSplit
         contents={[
           {
-            title: "Setting the Stage for Your Dream Party",
-            description:
-              "Our fleet of buses isn't just about getting from A to B; they're an adventure waiting to unfold. Whether it's an intimate get-together or an all-out rave, we've got your back.",
+            title: "Why Choose Candy Party Buses for Your Transfers?",
+            description: "",
           },
           {
-            title: "Party Bus Services That Make Us Stand Out",
+            title: "Punctuality Guaranteed:",
             description:
-              "One-Way & Return: Whether it's a single ride or a round trip, our service ensures you're at your destination on time. Drive-Around: Need the bus to be the party? Cruise around town, stop for refreshments, and keep the celebration going – all within the safety of our buses.",
+              "Count on us for timely transfers. We understand the importance of reaching your destination on time and ensuring punctual service for your peace of mind.",
+          },
+          {
+            title: "Comfortable and Efficient Travel:",
+            description:
+              "OOur buses offer a comfortable and spacious journey, equipped to handle your luggage and provide a relaxing transfer experience.",
+          },
+          {
+            title: "Professional Service, Every Time:",
+            description:
+              "Expect professionalism from our experienced drivers, who prioritize your safety and comfort throughout your transfer.",
           },
         ]}
         src="/stage-bus.jpeg"
+      />
+      <Column
+        title="What Our Transfer Service Includes"
+        description="Effortless Luggage Handling: Our buses accommodate various luggage sizes, ensuring a hassle-free journey without compromising on comfort.
+Seamless Airport Pickup: We provide clear instructions for designated meeting points at the airport, ensuring easy access to your Candy Party Bus upon arrival.
+Flight Monitoring Capabilities: Candy Party Buses offers flight monitoring services to adjust transfers in case of delays or early arrivals, ensuring a smooth experience.
+Additional Comforts: Enjoy complimentary refreshments or Wi-Fi availability onboard, adding to your convenience during the journey."
+        backgroundImage=""
       />
       <Divider
         splitSide={SplitSide.WeirdRight}

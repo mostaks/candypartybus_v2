@@ -5,6 +5,7 @@ import Hero from "@/components/hero";
 import Divider, { SplitSide } from "@/components/divider";
 import ColumnSplit from "@/components/columnSplit";
 import Footer from "@/components/footer";
+import Column from "@/components/column";
 
 const page = () => {
   return (
@@ -31,6 +32,19 @@ const page = () => {
         ]}
         src="/stage-bus.jpeg"
       />
+      <Column
+        title="Efficiency at Its Best:"
+        description="We prioritize efficiency without compromising on the fun. Our professional team ensures a smooth journey, from planning your route to dropping you off at your formal venue."
+        backgroundImage=""
+      />
+      <Column
+        title="What Our Service Includes"
+        description="Impeccably maintained and stylish party buses that set the stage for your grand entrance.
+A dependable service that guarantees a safe and enjoyable ride for you and your classmates.
+Cost-effective packages tailored to suit your formal night needs."
+        backgroundImage=""
+      />
+
       <Divider
         splitSide={SplitSide.WeirdRight}
         title="Book Your School Formal Ride Today!"

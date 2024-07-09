@@ -5,6 +5,7 @@ import Hero from "@/components/hero";
 import Divider, { SplitSide } from "@/components/divider";
 import ColumnSplit from "@/components/columnSplit";
 import Footer from "@/components/footer";
+import Column from "@/components/column";
 
 const page = () => {
   return (
@@ -19,18 +20,35 @@ const page = () => {
       <ColumnSplit
         contents={[
           {
-            title: "Setting the Stage for Your Dream Party",
-            description:
-              "Our fleet of buses isn't just about getting from A to B; they're an adventure waiting to unfold. Whether it's an intimate get-together or an all-out rave, we've got your back.",
+            title: "Why Choose Candy Party Buses for Your Big Day?",
+            description: "",
           },
           {
-            title: "Party Bus Services That Make Us Stand Out",
+            title: "A Dash of Elegance:",
             description:
-              "One-Way & Return: Whether it's a single ride or a round trip, our service ensures you're at your destination on time. Drive-Around: Need the bus to be the party? Cruise around town, stop for refreshments, and keep the celebration going – all within the safety of our buses.",
+              "Say goodbye to traditional transport. Our buses offer a unique blend of elegance and fun, making your wedding or engagement even more memorable.",
+          },
+          {
+            title: "Customised Romance:",
+            description:
+              "We understand that your day is unique. That's why we customise the experience, from the decor to the music, to match your vision of a perfect celebration.",
+          },
+          {
+            title: "Reliability on Your Special Day:",
+            description:
+              "Count on us for punctuality and efficiency, ensuring you arrive at your wedding venue or engagement party with flair and on time.",
           },
         ]}
         src="/stage-bus.jpeg"
       />
+      <Column
+        title="What Our Service Includes"
+        description="Stunningly decorated party buses that become part of your wedding story's backdrop.
+A reliable and professional service that assures a stress-free journey on your special day.
+Tailored packages that cater to your specific wedding or engagement needs."
+        backgroundImage=""
+      />
+
       <Divider
         splitSide={SplitSide.WeirdRight}
         title="Ready to Ride into the '80s?"

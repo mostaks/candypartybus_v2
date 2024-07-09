@@ -5,6 +5,7 @@ import Hero from "@/components/hero";
 import Divider, { SplitSide } from "@/components/divider";
 import ColumnSplit from "@/components/columnSplit";
 import Footer from "@/components/footer";
+import Column from "@/components/column";
 
 const page = () => {
   return (
@@ -18,18 +19,34 @@ const page = () => {
       <ColumnSplit
         contents={[
           {
-            title: "Setting the Stage for Your Dream Party",
-            description:
-              "Our fleet of buses isn't just about getting from A to B; they're an adventure waiting to unfold. Whether it's an intimate get-together or an all-out rave, we've got your back.",
+            title: "Why Choose Candy Party Buses for Your Corporate Event?",
+            description: "",
           },
           {
-            title: "Party Bus Services That Make Us Stand Out",
+            title: "Versatile Chartering Options:",
             description:
-              "One-Way & Return: Whether it's a single ride or a round trip, our service ensures you're at your destination on time. Drive-Around: Need the bus to be the party? Cruise around town, stop for refreshments, and keep the celebration going – all within the safety of our buses.",
+              "Whether it's a seminar, conference, or company retreat, we have the right bus to meet your specific requirements, ensuring a comfortable and productive journey.",
+          },
+          {
+            title: "Drive-Around Option:",
+            description: `Take your corporate event to a new level with our "Drive Around" option. Ideal for groups with no final destination, this unique service allows you to party within the safety of the bus. We drive around for an agreed amount of hours, stopping at your request for food and toilet breaks.`,
+          },
+          {
+            title: "Professionalism Meets Fun:",
+            description:
+              "We understand the importance of professionalism for corporate events. Rest assured, our services are punctual, efficient, and tailored to ensure a smooth experience while adding an element of fun.",
           },
         ]}
         src="/stage-bus.jpeg"
       />
+      <Column
+        title="What Our Transport Service Includes"
+        description="Fully equipped charter buses that combine comfort and functionality for your corporate needs.
+Customizable options, including the drive-around service, to match your event's specific requirements.
+Professional and experienced drivers committed to making your corporate event transportation seamless and stress-free."
+        backgroundImage=""
+      />
+
       <Divider
         splitSide={SplitSide.WeirdRight}
         title="Make Your Corporate Event Memorable!"

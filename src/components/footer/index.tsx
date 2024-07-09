@@ -1,5 +1,15 @@
 import React from "react";
 import styles from "./footer.module.css";
+import Link from "next/link";
+
+const socialLinks = [
+  {
+    name: "facebook",
+    url: "http://facebook.com/profile.php?id=100062963242877",
+  },
+  { name: "insta", url: "http://instagram.com/candypartybus" },
+  { name: "google", url: "https://maps.app.goo.gl/tFi3VTDPjrJZqD89A" },
+];
 
 const footer = () => {
   return (
@@ -7,10 +17,18 @@ const footer = () => {
       <div className={styles.background}>
         <div className={styles.row}>
           <div className={styles.pink}>Quick Links</div>
-          <div className={styles.itemBolder}>Home</div>
-          <div className={styles.itemBolder}>What we offer</div>
-          <div className={styles.itemBolder}>Our busses</div>
-          <div className={styles.itemBolder}>Book your ride</div>
+          <div className={styles.itemBolder}>
+            <Link href={"/"}>{"Home"}</Link>
+          </div>
+          <div className={styles.itemBolder}>
+            <Link href={"/gallery"}>{"Gallery"}</Link>
+          </div>
+          <div className={styles.itemBolder}>
+            <Link href={"/bus-fleet"}>{"Our busses"}</Link>
+          </div>
+          <div className={styles.itemBolder}>
+            <Link href={"/book-your-event"}>{"Book your ride"}</Link>
+          </div>
         </div>
         <div className={styles.row}>
           <div className={styles.pink}>Contact Information</div>
@@ -24,9 +42,18 @@ const footer = () => {
           <div className={styles.pink}>Business Hours</div>
           <div className={styles.item}>Mon - Sun</div>
           <div style={{ display: "flex" }}>
-            <div>FB</div>
-            <div>Insta</div>
-            <div>Map</div>
+            <div style={{ display: "flex", gap: "15px" }}>
+              {socialLinks.map((item, index) => (
+                <a
+                  key={index}
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
         <div className={styles.row}>

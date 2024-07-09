@@ -5,6 +5,7 @@ import Hero from "@/components/hero";
 import Divider, { SplitSide } from "@/components/divider";
 import ColumnSplit from "@/components/columnSplit";
 import Footer from "@/components/footer";
+import Column from "@/components/column";
 
 const page = () => {
   return (
@@ -19,17 +20,22 @@ const page = () => {
       <ColumnSplit
         contents={[
           {
-            title: "Setting the Stage for Your Dream Party",
+            title: "Tailored Experiences for Special Celebrations",
             description:
-              "Our fleet of buses isn't just about getting from A to B; they're an adventure waiting to unfold. Whether it's an intimate get-together or an all-out rave, we've got your back.",
+              "We specialise in crafting bucks and hen's nights that go beyond the ordinary. Recognising these events as once-in-a-lifetime celebrations, we take pride in curating an experience that exceeds your wildest expectations. Your dreams set the stage, and we bring them to life. From curating the perfect playlist to choosing your destination, every detail is customised to your desires.",
           },
           {
-            title: "Party Bus Services That Make Us Stand Out",
+            title: "Party on Wheels: Where Every Moment Counts",
             description:
-              "One-Way & Return: Whether it's a single ride or a round trip, our service ensures you're at your destination on time. Drive-Around: Need the bus to be the party? Cruise around town, stop for refreshments, and keep the celebration going – all within the safety of our buses.",
+              "Step aboard our party buses that boast state-of-the-art sound systems, laser lighting, spacious dance floors, and luxurious seating. Immerse yourself in comfort and entertainment as our professional crew takes you on a city tour, ensuring you're at the heart of the hottest nightlife spots, never missing a beat.",
           },
         ]}
         src="/stage-bus.jpeg"
+      />
+      <Column
+        title="An Array of Exciting Activities"
+        description="Explore our range of packages, meticulously designed to suit every budget and group size. Whether it's an intimate gathering or a larger-than-life celebration, our party buses are primed to make your night a legendary experience. From bachelor parties to school formals or corporate events, Candy Party Bus promises a hassle-free and memorable journey."
+        backgroundImage=""
       />
       <Divider
         splitSide={SplitSide.WeirdRight}
