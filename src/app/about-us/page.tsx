@@ -5,6 +5,7 @@ import Hero from "@/components/hero";
 import Divider, { SplitSide } from "@/components/divider";
 import ColumnSplit from "@/components/columnSplit";
 import Footer from "@/components/footer";
+import Column from "@/components/column";
 
 const page = () => {
   return (
@@ -18,21 +19,26 @@ const page = () => {
       <ColumnSplit
         contents={[
           {
-            title: "Setting the Stage for Your Dream Party",
+            title: "Services We Offer",
             description:
-              "Our fleet of buses isn't just about getting from A to B; they're an adventure waiting to unfold. Whether it's an intimate get-together or an all-out rave, we've got your back.",
+              "Step into our fleet of party buses, each designed to cater to a variety of events and preferences. From birthdays to weddings, corporate events to wild nights out, our buses offer unique features that promise an experience like no other. Whether you’re seeking a smaller, tamer gathering or an all-out extravaganza, Candy Party Bus has the ride for you.",
           },
           {
-            title: "Party Bus Services That Make Us Stand Out",
+            title: "Our Commitment to Quality",
             description:
-              "One-Way & Return: Whether it's a single ride or a round trip, our service ensures you're at your destination on time. Drive-Around: Need the bus to be the party? Cruise around town, stop for refreshments, and keep the celebration going – all within the safety of our buses.",
+              "We believe that every event, regardless of size, deserves the Candy Party Bus touch. Our commitment to quality isn’t just about flashy lights and booming sound systems—it’s about ensuring that your vision becomes a reality. We sweat the details so that your celebration is exactly as you’ve dreamed, and perhaps even more.",
           },
         ]}
         src="/stage-bus.jpeg"
       />
+      <Column
+        title="Customer Satisfaction"
+        description="The heart of Candy Party Bus lies in the satisfaction of our customers. Each successful event is a testament to our dedication to creating not just parties, but experiences that leave smiles on faces and memories that linger."
+        backgroundImage=""
+      />
       <Divider
         splitSide={SplitSide.WeirdRight}
-        body="Candy Party Bus offers more than just a ride; it's an experience. Book now for an adventure like no other! If it's fun, if it's outrageous!"
+        body="Ready to embark on an '80s-inspired adventure? Let's plan your unforgettable party together!"
         cta="0434 222 343"
       />
       <Footer />

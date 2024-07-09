@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./column.module.css";
 
-const columnSplit = ({
+const column = ({
   title,
   description,
   backgroundImage,
@@ -11,10 +11,7 @@ const columnSplit = ({
   backgroundImage: string;
 }) => {
   return (
-    <div
-      className={styles.container}
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-    >
+    <div className={styles.container}>
       <div className={styles.column}>
         <div className={styles.content}>
           <h2>{title}</h2>
@@ -25,4 +22,4 @@ const columnSplit = ({
   );
 };
 
-export default columnSplit;
+export default column;
