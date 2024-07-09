@@ -12,7 +12,6 @@ const page = () => {
           <Header/>
           <Hero/>
           <Form />
-          <Divider/>
           <Footer />
       </main>
   )
