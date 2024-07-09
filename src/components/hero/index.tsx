@@ -95,10 +95,12 @@ const Hero = () => {
     <div
       className={styles.container}
       style={{
-        backgroundImage:
-          path === "/"
-            ? `url(${images[currentImageIndex]})`
-            : `url(${config?.backgroundImage})`,
+          backgroundImage:
+              path === "/"
+                  ? `url(${images[currentImageIndex]})`
+                  : `url(${config?.backgroundImage})`,
+          backgroundSize: 'cover', // Add this line to prevent image stretching
+          backgroundPosition: 'center', // Add this line to center the image
       }}
     >
       <div className={styles.overlay}></div>
@@ -131,7 +133,7 @@ const Hero = () => {
           </>
         )}
 
-        {config.showCTA && (
+        {config?.showCTA && (
           <>
             <a href="/book-your-event" className={styles.button}>
               All Aboard the Candy Party Bus Express!

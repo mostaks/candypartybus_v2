@@ -2,6 +2,18 @@
 import React, {useEffect, useRef, useState} from "react";
 import styles from "./header.module.css";
 import Link from "next/link";
+import {
+    Checkbox, Grid,
+    GridColumn,
+    Icon,
+    Menu,
+    MenuItem,
+    Segment,
+    Sidebar,
+    SidebarPushable,
+    SidebarPusher
+} from "semantic-ui-react";
+import HeaderSidebar from "@/components/header/sidebar";
 
 const routes = [
     {name: "home", path: "/"},
@@ -37,104 +49,90 @@ const socialLinks = [
 
 const Header = () => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
-    const [isScrolled, setIsScrolled] = useState(false);
     const headerRef = useRef(null);
 
     const toggleDropdown = () => {
         setDropdownOpen(!dropdownOpen);
     };
 
-    const handleScroll = () => {
-        console.log('hello')
-        if (window.scrollY > 40) {
-            setIsScrolled(true);
-        } else {
-            setIsScrolled(false);
-        }
-    };
-
-    useEffect(() => {
-        document.body.addEventListener("scroll", handleScroll);
-
-        return () => document.body.removeEventListener("scroll", handleScroll);
-    }, []);
-
     return (
-        <div ref={headerRef} className={styles.container}>
-            <div className={`${isScrolled ? styles.hidden : styles.header}`}>
-                <Link href="/">
-                    <img src="/candy-logo-bus.webp" alt="Logo" className={styles.logo}/>
-                </Link>
-                <div className={styles.headerText}>
-                    Our Location
-                    <br/>
-                    <a
-                        href="https://www.google.com/maps/place/Sydney+NSW/@-33.8472349,150.6023383,10z/data=!3m1!4b1!4m6!3m5!1s0x6b129838f39a743f:0x3017d681632a850!8m2!3d-33.8688197!4d151.2092955!16zL20vMDZ5NTc?entry=ttu"
-                        rel="noopener noreferer"
-                        target="_blank"
-                    >
-                        Serving Sydney and Surrounding Areas
-                    </a>
-                </div>
-                <div className={styles.callToAction}>
-                    Call Us Now
-                    <br />
-                    0434222343
-                </div>
-            </div>
-            <div className={styles.background}>
-                <div className={styles.nav}>
-                    {routes.map(
-                        (
-                            item: {
-                                name: string;
-                                path: string;
-                                items?: { name: string; path: string }[];
-                            },
-                            index
-                        ) => (
-                            <div key={index} className={styles.nav}>
-                                {item.items ? (
-                                    <div
-                                        className={styles.dropdownToggle}
-                                        onClick={toggleDropdown}
-                                    >
-                                        {item.name}
-                                        {dropdownOpen && (
-                                            <div className={styles.dropdownMenu}>
-                                                {item.items.map((subItem) => (
-                                                    <Link
-                                                        className={styles.nav}
-                                                        key={subItem.name}
-                                                        href={subItem.path}
-                                                    >
-                                                        {subItem.name}
-                                                    </Link>
-                                                ))}
-                                            </div>
-                                        )}
-                                    </div>
-                                ) : (
-                                    <Link href={item.path}>{item.name}</Link>
-                                )}
-                            </div>
-                        )
-                    )}
-                </div>
-                <div className={styles.socialIcons}>
-                    {socialLinks.map((item, index) => (
+        <>
+            <div ref={headerRef} className={styles.container}>
+                <div className={styles.header}>
+                    <Link href="/">
+                        <img src="/candy-logo-bus.webp" alt="Logo" className={styles.logo}/>
+                    </Link>
+                    <div className={styles.headerText}>
+                        Our Location
+                        <br/>
                         <a
-                            key={index}
-                            href={item.url}
+                            href="https://www.google.com/maps/place/Sydney+NSW/@-33.8472349,150.6023383,10z/data=!3m1!4b1!4m6!3m5!1s0x6b129838f39a743f:0x3017d681632a850!8m2!3d-33.8688197!4d151.2092955!16zL20vMDZ5NTc?entry=ttu"
+                            rel="noopener noreferer"
                             target="_blank"
-                            rel="noopener noreferrer"
                         >
-                            {item.name}
+                            Serving Sydney and Surrounding Areas
                         </a>
-                    ))}
+                    </div>
+                    <div className={styles.callToAction}>
+                        Call Us Now
+                        <br/>
+                        0434222343
+                    </div>
+                </div>
+                <div className={styles.background}>
+                    <div className={styles.nav}>
+                        {routes.map(
+                            (
+                                item: {
+                                    name: string;
+                                    path: string;
+                                    items?: { name: string; path: string }[];
+                                },
+                                index
+                            ) => (
+                                <div key={index} className={styles.nav}>
+                                    {item.items ? (
+                                        <div
+                                            className={styles.dropdownToggle}
+                                            onClick={toggleDropdown}
+                                        >
+                                            {item.name}
+                                            {dropdownOpen && (
+                                                <div className={styles.dropdownMenu}>
+                                                    {item.items.map((subItem) => (
+                                                        <Link
+                                                            className={styles.nav}
+                                                            key={subItem.name}
+                                                            href={subItem.path}
+                                                        >
+                                                            {subItem.name}
+                                                        </Link>
+                                                    ))}
+                                                </div>
+                                            )}
+                                        </div>
+                                    ) : (
+                                        <Link href={item.path}>{item.name}</Link>
+                                    )}
+                                </div>
+                            )
+                        )}
+                    </div>
+                    <div className={styles.socialIcons}>
+                        {socialLinks.map((item, index) => (
+                            <a
+                                key={index}
+                                href={item.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {item.name}
+                            </a>
+                        ))}
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 
