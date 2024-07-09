@@ -146,3 +146,55 @@
     cursor: pointer;
     font-size: 20px;
 }
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .headerText,
+    .callToAction {
+        margin-top: 1rem;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdownToggle {
+        margin-bottom: 0.5rem;
+    }
+
+    .dropdownMenu {
+        position: static;
+        box-shadow: none;
+    }
+}
+
+.hamburger {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .headerText, .callToAction, .socialIcons {
+        display: none;
+    }
+
+    .background {
+        justify-content: center;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+}
+
