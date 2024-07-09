@@ -15,9 +15,6 @@ const form = () => {
                 templateParams[item.name] = item.value;
             });
 
-            console.log(templateParams);
-
-
             const {text} = await emailJs.send(
                 "service_m5qg8xt",
                 "template_l6yrbv3",
@@ -27,7 +24,6 @@ const form = () => {
 
             setSubmitted(text === 'OK');
         } catch (e) {
-            console.log(e);
             setSubmitted(false);
         }
     };

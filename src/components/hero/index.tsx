@@ -100,8 +100,6 @@ const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const path = usePathname();
 
-  console.log(path);
-
   const config = configItems.find((x) => x.path === path);
 
   useEffect(() => {

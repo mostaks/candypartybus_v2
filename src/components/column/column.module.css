@@ -1,37 +1,53 @@
-
 @font-face {
-  font-family: texter;
-  src: url('/texter.ttf');
+    font-family: texter;
+    src: url('/texter.ttf');
 }
 
 @font-face {
-  font-family: light;
-  src: url('/light.ttf');
+    font-family: light;
+    src: url('/light.ttf');
 }
 
 @font-face {
-  font-family: medium;
-  src: url('/medium.ttf');
+    font-family: medium;
+    src: url('/medium.ttf');
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 300px;
+    width: 100%;
+    margin-bottom: 80px;
 }
 
 .column {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1200px;
 }
 
-.content {
-  flex: 1;
-  padding: 10px;
-  color: white;
-  font-family: light;
+.content h2 {
+    padding: 16px;
+    font-size: 32px;
+    color: rgba(234, 31, 228, 1);
+    font-family: texter, sans-serif;
+}
+
+.content p {
+    flex: 1;
+    padding: 10px;
+    color: white;
+    font-family: light, sans-serif;
+}
+
+.content ul li {
+    flex: 1;
+    padding: 10px;
+    color: white;
+    font-family: light, sans-serif;
+    margin-left: 40px;
 }

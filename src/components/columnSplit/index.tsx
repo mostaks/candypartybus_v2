@@ -9,9 +9,11 @@ interface ITitleDescription {
 const columnSplit = ({
   contents,
   src,
+    reverse
 }: {
   contents: ITitleDescription[];
   src: string;
+  reverse?: boolean;
 }) => {
   return (
     <div className={styles.container}>
