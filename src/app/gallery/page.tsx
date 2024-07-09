@@ -4,6 +4,13 @@ import Header from "@/components/header";
 import Hero from "@/components/hero";
 import Footer from "@/components/footer";
 
+const images = [
+  {
+    original: "cheers.jpg",
+    thumbnail: "cheers.jpg",
+  },
+];
+
 const page = () => {
   return (
     <main className={styles.main}>
