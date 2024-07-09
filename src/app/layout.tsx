@@ -5,8 +5,6 @@ import Head from "next/head";
 import Meta from "../components/meta";
 import "./globals.css";
 
-const inter = Inter({subsets: ["latin"]});
-
 const light = localFont({
   src: [
     { path: "../../public/light.ttf" },
