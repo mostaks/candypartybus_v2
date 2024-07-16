@@ -20,11 +20,7 @@ const columnSplit = ({
       <div className={styles.column}>
         <div className={styles.content}>
           <img
-            style={{
-              width: "20%",
-              paddingTop: 60,
-              marginBottom: 20,
-            }}
+            className={styles.sourceImage}
             src={"/retrowave-sunset.svg"}
           />
           {contents.map((x) => {

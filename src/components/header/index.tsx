@@ -2,19 +2,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./header.module.css";
 import Link from "next/link";
-import {
-  Checkbox,
-  Grid,
-  GridColumn,
-  Icon,
-  Menu,
-  MenuItem,
-  Segment,
-  Sidebar,
-  SidebarPushable,
-  SidebarPusher,
-} from "semantic-ui-react";
-import HeaderSidebar from "@/components/header/sidebar";
 
 const routes = [
   { name: "home", path: "/" },
@@ -131,6 +118,19 @@ const Header = () => {
                     onClick={toggleDropdown}
                   >
                     {item.name}
+                      {dropdownOpen && (
+                          <div className={styles.dropdownMenu}>
+                              {item.items.map((subItem) => (
+                                  <Link
+                                      className={styles.nav}
+                                      key={subItem.name}
+                                      href={subItem.path}
+                                  >
+                                      {subItem.name}
+                                  </Link>
+                              ))}
+                          </div>
+                      )}
                   </div>
                 ) : (
                   <Link href={item.path}>{item.name}</Link>
