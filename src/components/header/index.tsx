@@ -43,9 +43,18 @@ const socialLinks = [
   {
     name: "facebook",
     url: "http://facebook.com/profile.php?id=100062963242877",
+    image: "facebook.png",
   },
-  { name: "insta", url: "http://instagram.com/candypartybus" },
-  { name: "google", url: "https://maps.app.goo.gl/tFi3VTDPjrJZqD89A" },
+  {
+    name: "insta",
+    url: "http://instagram.com/candypartybus",
+    image: "instagram.png",
+  },
+  {
+    name: "google",
+    url: "https://maps.app.goo.gl/tFi3VTDPjrJZqD89A",
+    image: "google.png",
+  },
 ];
 
 const Header = () => {
@@ -142,95 +151,16 @@ const Header = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {item.name}
+              <img
+                src={`/${item.image}`}
+                alt="Logo"
+                style={{ width: 30, height: 30 }}
+              />
             </a>
           ))}
         </div>
       </div>
     </div>
-  );
-  return (
-    <>
-      <div ref={headerRef} className={styles.container}>
-        <div className={styles.header}>
-          <Link href="/">
-            <img
-              src="/candy-logo-bus.webp"
-              alt="Logo"
-              className={styles.logo}
-            />
-          </Link>
-          <div className={styles.headerText}>
-            Our Location
-            <br />
-            <a
-              href="https://www.google.com/maps/place/Sydney+NSW/@-33.8472349,150.6023383,10z/data=!3m1!4b1!4m6!3m5!1s0x6b129838f39a743f:0x3017d681632a850!8m2!3d-33.8688197!4d151.2092955!16zL20vMDZ5NTc?entry=ttu"
-              rel="noopener noreferer"
-              target="_blank"
-            >
-              Serving Sydney and Surrounding Areas
-            </a>
-          </div>
-          <div className={styles.callToAction}>
-            Call Us Now
-            <br />
-            0434222343
-          </div>
-        </div>
-        <div className={styles.background}>
-          <div className={styles.nav}>
-            {routes.map(
-              (
-                item: {
-                  name: string;
-                  path: string;
-                  items?: { name: string; path: string }[];
-                },
-                index
-              ) => (
-                <div key={index} className={styles.nav}>
-                  {item.items ? (
-                    <div
-                      className={styles.dropdownToggle}
-                      onClick={toggleDropdown}
-                    >
-                      {item.name}
-                      {dropdownOpen && (
-                        <div className={styles.dropdownMenu}>
-                          {item.items.map((subItem) => (
-                            <Link
-                              className={styles.nav}
-                              key={subItem.name}
-                              href={subItem.path}
-                            >
-                              {subItem.name}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    <Link href={item.path}>{item.name}</Link>
-                  )}
-                </div>
-              )
-            )}
-          </div>
-          <div className={styles.socialIcons}>
-            {socialLinks.map((item, index) => (
-              <a
-                key={index}
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {item.name}
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
-    </>
   );
 };
 

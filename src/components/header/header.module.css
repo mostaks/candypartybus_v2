@@ -15,13 +15,14 @@
 
 .container {
     width: 100%;
-
-    background-color: #000; /* Black background */
+    /* background-color: #000;  */
+    background-color: transparent;
     color: #fff; /* White text */
     padding: 0 0 20px;
     position: sticky;
     top: 0;
     z-index: 1000; /* Ensure it stays above other content */
+    
 }
 
 .header {
@@ -88,6 +89,8 @@
     align-items: center;
     gap: 20px;
     font-family: medium;
+    font-weight: 800;
+
 }
 
 .nav a {
@@ -109,7 +112,12 @@
 }
 
 .nav .dropdownToggle:hover {
-    background-color: #ff4081; /* Pink background on hover */
+    color: rgba(113, 200, 232, 1); /* Font color on hover */
+    
+}
+
+.nav a:hover {
+    color: rgba(113, 200, 232, 1); /* Font color on hover */
 }
 
 .dropdownToggle {
