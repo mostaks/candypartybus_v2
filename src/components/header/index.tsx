@@ -80,6 +80,10 @@ const Header = () => {
     }
   };
 
+  const handleCallNow = () => {
+      window.open("tel:+61434222343");
+  }
+
   useEffect(() => {
     document.body.addEventListener("scroll", handleScroll);
 
@@ -103,14 +107,14 @@ const Header = () => {
             Serving Sydney and Surrounding Areas
           </a>
         </div>
-        <div className={styles.callToAction}>
+        <div onClick={handleCallNow} className={styles.callToAction}>
           Call Us Now
           <br />
           0434222343
         </div>
       </div>
       <div className={styles.background}>
-        <div className={`${mobileDropdownOpen ? styles.nav : styles.hidden}`}>
+        <div className={`${mobileDropdownOpen ? styles.nav : styles.hiddenNav}`}>
           {routes.map(
             (
               item: {
@@ -134,9 +138,29 @@ const Header = () => {
               </div>
             )
           )}
-            <i onClick={toggleHeader} className={`bars icon`}></i>
+            <div className={`${styles.socialIcons} ${mobileDropdownOpen ? styles.showMobile : styles.hideMobile}`}>
+                {socialLinks.map((item, index) => (
+                    <a
+                        key={index}
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img
+                            src={`/${item.image}`}
+                            alt="Logo"
+                            style={{ width: 30, height: 30 }}
+                        />
+                    </a>
+                ))}
+            </div>
+            <div onClick={handleCallNow} className={`${styles.callToActionMobile} ${mobileDropdownOpen ? styles.showMobile : styles.hideMobile}`}>
+                Call Us Now
+                <br />
+                0434222343
+            </div>
+            <i onClick={toggleHeader} className={`${mobileDropdownOpen ? styles.showMobile : styles.hideMobile} bars icon`}></i>
         </div>
-        <i onClick={toggleHeader} className={`${mobileDropdownOpen ? styles.hideMobile : styles.showMobile} bars icon`}></i>
         <div className={styles.socialIcons}>
           {socialLinks.map((item, index) => (
             <a
@@ -153,6 +177,7 @@ const Header = () => {
             </a>
           ))}
         </div>
+        <i onClick={toggleHeader} className={`${mobileDropdownOpen ? styles.hideMobile : styles.showMobile} bars icon`}></i>
       </div>
     </div>
   );

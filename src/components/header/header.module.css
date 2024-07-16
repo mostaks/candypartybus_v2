@@ -76,6 +76,22 @@
     line-height: 1.5;
 }
 
+.callToActionMobile {
+    cursor: pointer;
+    height: 140px;
+    background-color: rgba(234, 31, 228, 1);
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
 .background {
     display: flex;
     justify-content: space-between;
@@ -189,17 +205,28 @@
     display: none;
 }
 
+.hiddenNav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: medium;
+    font-weight: 800;
+}
+
 .showMobile {
-    display: flex !important;
+    display: none !important;
 }
 .hideMobile {
     display: none !important;
 }
 
 
-
 @media (max-width: 768px) {
     .headerText, .callToAction, .socialIcons {
+        display: none;
+    }
+
+    .hiddenNav {
         display: none;
     }
 
@@ -210,5 +237,13 @@
     .hamburger {
         display: block;
     }
+
+    .showMobile {
+        display: flex !important;
+    }
+    .hideMobile {
+        display: none !important;
+    }
+
 }
 
