@@ -17,14 +17,10 @@ const columnSplit = ({
 }) => {
   return (
     <div className={styles.container}>
-      <div className={styles.column}>
+      <div className={`${styles.column} ${reverse ? styles.reversed : ''}`}>
         <div className={styles.content}>
           <img
-            style={{
-              width: "20%",
-              paddingTop: 60,
-              marginBottom: 20,
-            }}
+            className={styles.sourceImage}
             src={"/retrowave-sunset.svg"}
           />
           {contents.map((x) => {
