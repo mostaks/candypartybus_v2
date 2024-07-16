@@ -22,7 +22,7 @@ const HeaderSidebar = () => {
                 <Icon
                     name="align justify"
                     size="large"
-                    onChange={(e, data) => setVisible(data.checked)}
+                    onChange={(e: any, data: any) => setVisible(data.checked)}
                     style={{display: visible ? 'block' : 'none'}}
                 />
             </div>

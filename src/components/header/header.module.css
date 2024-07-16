@@ -15,7 +15,6 @@
 
 .container {
     width: 100%;
-
     background-color: #000; /* Black background */
     color: #fff; /* White text */
     padding: 0 0 20px;
@@ -183,6 +182,15 @@
     display: none;
 }
 
+.showMobile {
+    display: flex !important;
+}
+.hideMobile {
+    display: none !important;
+}
+
+
+
 @media (max-width: 768px) {
     .headerText, .callToAction, .socialIcons {
         display: none;
@@ -195,6 +203,5 @@
     .hamburger {
         display: block;
     }
-
 }
 
