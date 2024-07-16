@@ -35,7 +35,6 @@ const page = () => {
       <Column
         title="An Array of Exciting Activities"
         description="Explore our range of packages, meticulously designed to suit every budget and group size. Whether it's an intimate gathering or a larger-than-life celebration, our party buses are primed to make your night a legendary experience. From bachelor parties to school formals or corporate events, Candy Party Bus promises a hassle-free and memorable journey."
-        backgroundImage=""
       />
       <Divider
         splitSide={SplitSide.WeirdRight}

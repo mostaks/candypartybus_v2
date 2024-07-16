@@ -46,7 +46,6 @@ const page = () => {
         description="Stunningly decorated party buses that become part of your wedding story's backdrop.
 A reliable and professional service that assures a stress-free journey on your special day.
 Tailored packages that cater to your specific wedding or engagement needs."
-        backgroundImage=""
       />
 
       <Divider

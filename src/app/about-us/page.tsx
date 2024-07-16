@@ -34,7 +34,6 @@ const page = () => {
       <Column
         title="Customer Satisfaction"
         description="The heart of Candy Party Bus lies in the satisfaction of our customers. Each successful event is a testament to our dedication to creating not just parties, but experiences that leave smiles on faces and memories that linger."
-        backgroundImage=""
       />
       <Divider
         splitSide={SplitSide.WeirdRight}

@@ -44,7 +44,6 @@ const page = () => {
         description="Fully equipped charter buses that combine comfort and functionality for your corporate needs.
 Customizable options, including the drive-around service, to match your event's specific requirements.
 Professional and experienced drivers committed to making your corporate event transportation seamless and stress-free."
-        backgroundImage=""
       />
 
       <Divider

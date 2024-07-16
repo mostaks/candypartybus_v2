@@ -1,12 +1,12 @@
 "use client";
-import React, {useState} from "react";
+import React, {FormEvent, ReactEventHandler, useState} from "react";
 import styles from "./form.module.css";
 import {Button, Form, FormField} from "semantic-ui-react";
 import * as emailJs from 'emailjs-com';
 
 const form = () => {
     const [submitted, setSubmitted] = useState(false);
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: any) => {
         try {
             const templateParams: Record<string, unknown> = {};
             e.preventDefault();
@@ -15,6 +15,7 @@ const form = () => {
                 templateParams[item.name] = item.value;
             });
 
+            // TODO: Chat with Jamie about setting up emailJs again
             const {text} = await emailJs.send(
                 "service_m5qg8xt",
                 "template_l6yrbv3",

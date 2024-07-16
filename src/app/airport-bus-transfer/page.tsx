@@ -47,7 +47,6 @@ const page = () => {
 Seamless Airport Pickup: We provide clear instructions for designated meeting points at the airport, ensuring easy access to your Candy Party Bus upon arrival.
 Flight Monitoring Capabilities: Candy Party Buses offers flight monitoring services to adjust transfers in case of delays or early arrivals, ensuring a smooth experience.
 Additional Comforts: Enjoy complimentary refreshments or Wi-Fi availability onboard, adding to your convenience during the journey."
-        backgroundImage=""
       />
       <Divider
         splitSide={SplitSide.WeirdRight}
