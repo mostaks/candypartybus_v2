@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import styles from "./footer.module.css";
 import Link from "next/link";
@@ -6,12 +8,27 @@ const socialLinks = [
   {
     name: "facebook",
     url: "http://facebook.com/profile.php?id=100062963242877",
+    image: "facebook.png",
   },
-  { name: "insta", url: "http://instagram.com/candypartybus" },
-  { name: "google", url: "https://maps.app.goo.gl/tFi3VTDPjrJZqD89A" },
+  {
+    name: "insta",
+    url: "http://instagram.com/candypartybus",
+    image: "instagram.png",
+  },
+  {
+    name: "google",
+    url: "https://maps.app.goo.gl/tFi3VTDPjrJZqD89A",
+    image: "google.png",
+  },
 ];
 
 const footer = () => {
+  const handleCallNow = () => {
+    window.open("tel:+61434222343");
+  };
+  const handleEmail = () => {
+    window.open("mailto:someone@candypartybus.com");
+  };
   return (
     <div className={styles.container}>
       <div className={styles.background}>
@@ -32,8 +49,18 @@ const footer = () => {
         </div>
         <div className={styles.row}>
           <div className={styles.pink}>Contact Information</div>
-          <div className={styles.item}>Phone: 0434222343</div>
-          <div className={styles.item}>Email: someone@candypartybus.com</div>
+          <div
+            onClick={handleCallNow}
+            className={`${styles.item} ${styles.callToAction}`}
+          >
+            Phone: 0434222343
+          </div>
+          <div
+            onClick={handleEmail}
+            className={`${styles.item} ${styles.callToAction}`}
+          >
+            Email: someone@candypartybus.com
+          </div>
           <div className={styles.item}>
             Address: Serving Sydney and Surrounding Areas
           </div>
@@ -50,7 +77,11 @@ const footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {item.name}
+                  <img
+                    src={`/${item.image}`}
+                    alt="Logo"
+                    style={{ width: 30, height: 30 }}
+                  />
                 </a>
               ))}
             </div>
