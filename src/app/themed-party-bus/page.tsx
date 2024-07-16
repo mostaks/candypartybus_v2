@@ -68,6 +68,7 @@ const page = () => {
               Our professional crew ensures a safe and enjoyable ride so you can focus on celebrating without worry.`,
           },
         ]}
+        reverse
         src="/stage-bus.jpeg"
       />
 

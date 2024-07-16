@@ -29,6 +29,10 @@
   max-height: 800px;
 }
 
+.reversed {
+    flex-direction: row-reverse;
+}
+
 .image {
   flex: 1;
   padding: 10px;

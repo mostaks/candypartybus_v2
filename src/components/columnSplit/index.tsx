@@ -17,7 +17,7 @@ const columnSplit = ({
 }) => {
   return (
     <div className={styles.container}>
-      <div className={styles.column}>
+      <div className={`${styles.column} ${reverse ? styles.reversed : ''}`}>
         <div className={styles.content}>
           <img
             className={styles.sourceImage}

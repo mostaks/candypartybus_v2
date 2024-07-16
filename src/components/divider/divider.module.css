@@ -18,7 +18,7 @@
     height: 180px;
     background-color: transparent;
     position: relative;
-    margin: 28px 0 0;
+    margin: 100px 0 0;
 }
 
 .bottomRow {
@@ -122,4 +122,14 @@
     text-align: center;
     align-items: center;
     display: flex;
+}
+
+@media (max-width: 768px) {
+    .container, .body {
+        height: 100%;
+    }
+    .weirdShape, .weirdShapeReversed {
+        width: 100%;
+        height: initial;
+    }
 }
