@@ -28,10 +28,10 @@ const page = () => {
       />
       <Column
         title="24-Seater Mini Party Bus"
-        description="Our 24-seater mini-party bus is the perfect choice for smaller yet equally vibrant groups. This bus has been crafted from the inside out to cater to your party needs, featuring laser lights, a booming sound system, and a trippy interior design. Don’t be fooled by its size—the sound system might be too big for a bus this size! Party lights and lasers elevate the atmosphere, ensuring your celebration is unforgettable.
-
-Whether you’re seeking the grandeur of our forthcoming 80-passenger marvel or the intimacy of our 24-seater mini-party bus, Candy Party Bus guarantees an electrifying ride for your group."
-        backgroundImage=""
+        paragraphs={[
+          "Our 24-seater mini-party bus is the perfect choice for smaller yet equally vibrant groups. This bus has been crafted from the inside out to cater to your party needs, featuring laser lights, a booming sound system, and a trippy interior design. Don't be fooled by its size—the sound system might be too big for a bus this size! Party lights and lasers elevate the atmosphere, ensuring your celebration is unforgettable.",
+          "Whether you're seeking the grandeur of our forthcoming 80-passenger marvel or the intimacy of our 24-seater mini-party bus, Candy Party Bus guarantees an electrifying ride for your group.",
+        ]}
       />
       <div style={{ paddingTop: 100 }} />
       <Divider

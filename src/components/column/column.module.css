@@ -18,9 +18,10 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
-    height: 300px;
+    height: auto;
     width: 100%;
-    margin-bottom: 80px;
+    background-image: url('/lazers.jpg');
+    box-shadow: inset 0 0 0 2000px rgb(0, 0, 0, 0.7);
 }
 
 .column {
@@ -28,6 +29,7 @@
     flex-direction: row;
     width: 100%;
     max-width: 1200px;
+    height: auto;
 }
 
 .content h2 {
@@ -35,16 +37,20 @@
     font-size: 32px;
     color: rgba(234, 31, 228, 1);
     font-family: texter, sans-serif;
+    height: auto;
 }
 
 .content p {
+    height: auto;
     flex: 1;
     padding: 10px;
     color: white;
     font-family: light, sans-serif;
+    font-size: 18px;
 }
 
 .content ul li {
+    height: auto;
     flex: 1;
     padding: 10px;
     color: white;
