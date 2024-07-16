@@ -9,7 +9,7 @@ interface ITitleDescription {
 const columnSplit = ({
   contents,
   src,
-    reverse
+  reverse,
 }: {
   contents: ITitleDescription[];
   src: string;
