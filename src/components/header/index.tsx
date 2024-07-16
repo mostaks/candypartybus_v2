@@ -43,9 +43,18 @@ const socialLinks = [
   {
     name: "facebook",
     url: "http://facebook.com/profile.php?id=100062963242877",
+    image: "facebook.png",
   },
-  { name: "insta", url: "http://instagram.com/candypartybus" },
-  { name: "google", url: "https://maps.app.goo.gl/tFi3VTDPjrJZqD89A" },
+  {
+    name: "insta",
+    url: "http://instagram.com/candypartybus",
+    image: "instagram.png",
+  },
+  {
+    name: "google",
+    url: "https://maps.app.goo.gl/tFi3VTDPjrJZqD89A",
+    image: "google.png",
+  },
 ];
 
 const Header = () => {
@@ -136,7 +145,11 @@ const Header = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {item.name}
+              <img
+                src={`/${item.image}`}
+                alt="Logo"
+                style={{ width: 30, height: 30 }}
+              />
             </a>
           ))}
         </div>
