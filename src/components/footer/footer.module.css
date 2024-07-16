@@ -37,20 +37,20 @@
 
 .callToAction {
     cursor: pointer;
-   
+
 }
 
 .row {
     flex-direction: row;
     font-size: 20px;
     color: white;
-    font-family: light;
+    font-family: light, sans-serif;
 }
 
 .pink {
     color: #ea1fe4;
     font-size: 20px;
-    font-family: texter;
+    font-family: texter, sans-serif;
     padding-bottom: 20px;
 }
 
@@ -66,5 +66,5 @@
 .boohoo {
     font-size: 10px;
     color: white;
-    font-family: light;
+    font-family: light, sans-serif;
 }

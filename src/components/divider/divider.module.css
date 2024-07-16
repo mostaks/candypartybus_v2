@@ -1,15 +1,15 @@
 @font-face {
-    font-family: texter;
+    font-family: texter, sans-serif;
     src: url('/texter.ttf');
 }
 
 @font-face {
-    font-family: light;
+    font-family: light, sans-serif;
     src: url('/light.ttf');
 }
 
 @font-face {
-    font-family: medium;
+    font-family: medium, sans-serif;
     src: url('/medium.ttf');
 }
 
@@ -38,7 +38,6 @@
     position: absolute;
     bottom: 0;
     opacity: 1;
-    box-shadow: 1px 1px 5px 0px gray;
     background-image: url('/cool-wave.jpg');
     min-height: 100%;
     background-size: cover;
@@ -61,7 +60,6 @@
     bottom: 0;
     right: 0;
     opacity: 1;
-    box-shadow: 1px 1px 5px 0px gray;
     background-image: url('/cool-wave.jpg');
     min-height: 100%;
     background-size: cover;
@@ -87,8 +85,7 @@
     font-size: 18px;
     justify-self: center;
     line-height: 35px;
-    font-family: light;
-    font-family: medium;
+    font-family: medium, sans-serif;
 }
 
 .title {
@@ -105,8 +102,7 @@
     font-size: 35px;
     justify-self: center;
     line-height: 35px;
-    font-family: light;
-    font-family: texter;
+    font-family: texter, sans-serif;
 }
 
 .cta {
@@ -117,7 +113,7 @@
     font-size: 18px;
     height: 50px;
     border-radius: 50px;
-    font-family: medium;
+    font-family: medium, sans-serif;
     font-weight: 400;
     text-align: center;
     align-items: center;

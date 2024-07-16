@@ -1,15 +1,15 @@
 @font-face {
-    font-family: texter;
+    font-family: texter, sans-serif;
     src: url('/texter.ttf');
 }
 
 @font-face {
-    font-family: light;
+    font-family: light, sans-serif;
     src: url('/light.ttf');
 }
 
 @font-face {
-    font-family: medium;
+    font-family: medium, sans-serif;
     src: url('/medium.ttf');
 }
 
