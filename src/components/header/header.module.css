@@ -127,11 +127,31 @@
 
 .nav .dropdownToggle:hover {
     color: rgba(113, 200, 232, 1); /* Font color on hover */
-
 }
 
 .nav a:hover {
     color: rgba(113, 200, 232, 1); /* Font color on hover */
+    border-bottom: solid 1px;
+}
+
+.nav.selected a {
+    color: rgba(113, 200, 232, 1) !important; /* Font color if selected */
+    border-bottom: solid 1px;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.nav.selected .dropdownToggle {
+    color: rgba(113, 200, 232, 1) !important; /* Font color if selected */
+    border-bottom: solid 1px;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
 }
 
 .dropdownToggle {
