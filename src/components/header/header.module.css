@@ -17,18 +17,22 @@
     width: 100%;
     /* background-color: #000;  */
     background-color: transparent;
-    color: #fff; /* White text */
+    color: #fff;
+    /* White text */
     padding: 0 0 20px;
     position: sticky;
     top: 0;
-    z-index: 1000; /* Ensure it stays above other content */
+    z-index: 1000;
+    /* Ensure it stays above other content */
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(35, 0, 36, 1); /* Adjust as needed */
+    background-color: rgba(35, 0, 36, 1);
+    background-image: url('/lazers.jpg');
+    background-position: bottom left;
     max-width: 75%;
     margin: 0 auto;
     height: 140px;
@@ -41,7 +45,8 @@
 }
 
 .logo {
-    height: 140px; /* Adjust as needed */
+    height: 140px;
+    /* Adjust as needed */
     padding: 10px 20px;
 }
 
@@ -126,16 +131,19 @@
 }
 
 .nav .dropdownToggle:hover {
-    color: rgba(113, 200, 232, 1); /* Font color on hover */
+    color: rgba(113, 200, 232, 1);
+    /* Font color on hover */
 }
 
 .nav a:hover {
-    color: rgba(113, 200, 232, 1); /* Font color on hover */
+    color: rgba(113, 200, 232, 1);
+    /* Font color on hover */
     border-bottom: solid 1px;
 }
 
 .nav.selected a {
-    color: rgba(113, 200, 232, 1) !important; /* Font color if selected */
+    color: rgba(113, 200, 232, 1) !important;
+    /* Font color if selected */
     border-bottom: solid 1px;
     text-decoration: none;
     font-size: 16px;
@@ -145,7 +153,8 @@
 }
 
 .nav.selected .dropdownToggle {
-    color: rgba(113, 200, 232, 1) !important; /* Font color if selected */
+    color: rgba(113, 200, 232, 1) !important;
+    /* Font color if selected */
     border-bottom: solid 1px;
     text-decoration: none;
     font-size: 16px;
@@ -236,13 +245,17 @@
 .showMobile {
     display: none !important;
 }
+
 .hideMobile {
     display: none !important;
 }
 
 
 @media (max-width: 768px) {
-    .headerText, .callToAction, .socialIcons {
+
+    .headerText,
+    .callToAction,
+    .socialIcons {
         display: none;
     }
 
@@ -261,9 +274,9 @@
     .showMobile {
         display: flex !important;
     }
+
     .hideMobile {
         display: none !important;
     }
 
 }
-

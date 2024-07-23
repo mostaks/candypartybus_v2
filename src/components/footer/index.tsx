@@ -27,7 +27,7 @@ const footer = () => {
     window.open("tel:+61434222343");
   };
   const handleEmail = () => {
-    window.open("mailto:someone@candypartybus.com");
+    window.open("mailto:admin@candypartybus.com");
   };
   return (
     <div className={styles.container}>
@@ -59,7 +59,7 @@ const footer = () => {
             onClick={handleEmail}
             className={`${styles.item} ${styles.callToAction}`}
           >
-            Email: someone@candypartybus.com
+            Email: admin@candypartybus.com
           </div>
           <div className={styles.item}>
             Address: Serving Sydney and Surrounding Areas

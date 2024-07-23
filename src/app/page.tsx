@@ -56,7 +56,7 @@ export default function Home() {
       />
       <Divider
         splitSide={SplitSide.WeirdRight}
-        title="Ready to Ride into the '80s?"
+        title="Ready to Ride in style?"
         body="Candy Party Bus offers more than just a ride; it's an experience. Book now for an adventure like no other! If it's fun, if it's outrageous!"
         cta="0434 222 343"
       />

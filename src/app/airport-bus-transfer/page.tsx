@@ -31,7 +31,7 @@ const page = () => {
           {
             title: "Comfortable and Efficient Travel:",
             description:
-              "OOur buses offer a comfortable and spacious journey, equipped to handle your luggage and provide a relaxing transfer experience.",
+              "Our buses offer a comfortable and spacious journey, equipped to handle your luggage and provide a relaxing transfer experience.",
           },
           {
             title: "Professional Service, Every Time:",
