@@ -20,8 +20,12 @@ const page = () => {
   return (
     <main className={styles.main}>
       <Header />
-      <Hero />
-      <ReactImageGallery items={images} autoPlay={true} />
+      <ReactImageGallery
+        items={images}
+        autoPlay={true}
+        slideInterval={10000}
+        showFullscreenButton={true}
+      />
       <Footer />
     </main>
   );

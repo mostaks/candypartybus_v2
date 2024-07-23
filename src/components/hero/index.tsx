@@ -105,7 +105,7 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, []);
@@ -114,12 +114,12 @@ const Hero = () => {
     <div
       className={styles.container}
       style={{
-          backgroundImage:
-              path === "/"
-                  ? `url(${images[currentImageIndex]})`
-                  : `url(${config?.backgroundImage})`,
-          backgroundSize: 'cover', // Add this line to prevent image stretching
-          backgroundPosition: 'center', // Add this line to center the image
+        backgroundImage:
+          path === "/"
+            ? `url(${images[currentImageIndex]})`
+            : `url(${config?.backgroundImage})`,
+        backgroundSize: "cover", // Add this line to prevent image stretching
+        backgroundPosition: "center", // Add this line to center the image
       }}
     >
       <div className={styles.overlay}></div>
@@ -155,7 +155,7 @@ const Hero = () => {
         {config?.showCTA && (
           <>
             <a href="/book-your-event" className={styles.button}>
-              All Aboard the Candy Party Bus Express!
+              <b>All Aboard the Candy Party Bus Express!</b>
             </a>
           </>
         )}
