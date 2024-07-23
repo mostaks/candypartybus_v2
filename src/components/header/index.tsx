@@ -11,7 +11,7 @@ const routes = [
     {name: "gallery", path: "/gallery"},
     {
         name: "what we offer",
-        path: "/",
+        path: "/what-we-offer",
         items: [
             {name: "birthday parties", path: "/themed-party-bus"},
             {name: "bucks and hens", path: "/vip-party-bus"},
@@ -57,7 +57,6 @@ const Header = () => {
     };
 
     const toggleHeader = () => {
-        console.log("OI")
         setMobileDropdownOpen(!mobileDropdownOpen);
     };
 
@@ -113,7 +112,7 @@ const Header = () => {
                             },
                             index
                         ) => {
-                            const selected = pathname === item.path
+                            let selected = pathname === item.path
                                 || item.items?.some((p) => p.path === pathname);
                             return (
                                 <div key={index} className={`${styles.nav} ${selected ? styles.selected : ''}`}>
