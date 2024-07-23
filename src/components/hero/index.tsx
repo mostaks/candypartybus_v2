@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./hero.module.css";
 import { usePathname } from "next/navigation";
 
-const images = ["/home/hero-1.jpg", "/home/hero-2.jpg", "/home/hero-3.jpg"];
+const images = ["/home/hero-1.jpg", "/home/hero-2.jpg", "/home/hero-4.jpg", "/home/hero-5.jpg"];
 
 interface IHeroConfig {
   path: string;
