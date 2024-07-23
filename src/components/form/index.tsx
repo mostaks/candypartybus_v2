@@ -17,10 +17,10 @@ const form = () => {
 
             // TODO: Chat with Jamie about setting up emailJs again
             const {text} = await emailJs.send(
-                "service_m5qg8xt",
+                "service_d3lnilw",
                 "template_l6yrbv3",
                 templateParams,
-                "user_zR874qWdWi7VJoA8hbPfi"
+                "user_zR874qWdWi7VJoA8hbPfi "
             );
 
             setSubmitted(text === 'OK');
