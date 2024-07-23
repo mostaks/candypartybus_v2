@@ -9,7 +9,7 @@ import "react-image-gallery/styles/css/image-gallery.css";
 
 let images = [];
 
-for (var i = 1; i <= 31; i++) {
+for (var i = 3; i <= 31; i++) {
   images.push({
     original: `/photos/${i}.jpg`,
     thumbnail: `/photos/${i}.jpg`,
