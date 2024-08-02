@@ -70,8 +70,8 @@ const form = () => {
                         <input id="loc1" name="First Departure Location" required/>
                     </FormField>
                     <FormField className={`${styles.formGroup} ${styles.loc1Time}`}>
-                        <label htmlFor="loc1Time">First Departure Location</label>
-                        <input id="loc1Time" name="First Departure Location" required/>
+                        <label htmlFor="loc1Time">First Departure Time</label>
+                        <input id="loc1Time" name="First Departure Time" required/>
                     </FormField>
                     <FormField className={`${styles.formGroup} ${styles.loc2}`}>
                         <label htmlFor="loc2">First Arrival Location</label>
