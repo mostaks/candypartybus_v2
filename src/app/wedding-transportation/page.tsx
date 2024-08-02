@@ -39,7 +39,6 @@ const page = () => {
               "Count on us for punctuality and efficiency, ensuring you arrive at your wedding venue or engagement party with flair and on time.",
           },
         ]}
-        src="/stage-bus.jpeg"
       />
       <Column
         title="What Our Service Includes"

@@ -30,7 +30,6 @@ const page = () => {
               "Step aboard our party buses that boast state-of-the-art sound systems, laser lighting, spacious dance floors, and luxurious seating. Immerse yourself in comfort and entertainment as our professional crew takes you on a city tour, ensuring you're at the heart of the hottest nightlife spots, never missing a beat.",
           },
         ]}
-        src="/stage-bus.jpeg"
       />
       <Column
         title="An Array of Exciting Activities"

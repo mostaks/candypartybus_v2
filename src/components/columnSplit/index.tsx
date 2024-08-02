@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./columnSplit.module.css";
+import { randomInt } from "crypto";
 
 interface ITitleDescription {
   title: string;
@@ -12,17 +13,17 @@ const columnSplit = ({
   reverse,
 }: {
   contents: ITitleDescription[];
-  src: string;
+  src?: string;
   reverse?: boolean;
 }) => {
+  if (!src) {
+    src = `/photos/${randomInt(29) + 2}.jpg`;
+  }
   return (
     <div className={styles.container}>
-      <div className={`${styles.column} ${reverse ? styles.reversed : ''}`}>
+      <div className={`${styles.column} ${reverse ? styles.reversed : ""}`}>
         <div className={styles.content}>
-          <img
-            className={styles.sourceImage}
-            src={"/retrowave-sunset.svg"}
-          />
+          <img className={styles.sourceImage} src={"/retrowave-sunset.svg"} />
           {contents.map((x) => {
             return (
               <>
@@ -33,7 +34,10 @@ const columnSplit = ({
           })}
         </div>
         <div className={styles.image}>
-          <img src={src} style={{ height: "150%", width: "150%" }} />
+          <img
+            src={src}
+            style={{ height: "150%", width: "150%", aspectRatio: "auto" }}
+          />
         </div>
       </div>
     </div>

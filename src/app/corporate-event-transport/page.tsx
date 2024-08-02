@@ -37,7 +37,6 @@ const page = () => {
               "We understand the importance of professionalism for corporate events. Rest assured, our services are punctual, efficient, and tailored to ensure a smooth experience while adding an element of fun.",
           },
         ]}
-        src="/stage-bus.jpeg"
       />
       <Column
         title="What Our Transport Service Includes"

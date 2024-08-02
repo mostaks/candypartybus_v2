@@ -24,7 +24,6 @@ const page = () => {
               "Get ready for the ultimate party experience! Our soon-to-arrive 80-passenger full-size limo party bus is a marvel on wheels. Decked out with a completely covered, trippy interior design, a sprawling dance floor adorned with multiple dance poles, and DJ compatibility, this bus is primed for the wildest celebrations. The rear wall hosts an insane light show sound system and bespoke party lights/lasers, creating an atmosphere unlike any other party bus for hire. ",
           },
         ]}
-        src="/stage-bus.jpeg"
       />
       <Column
         title="24-Seater Mini Party Bus"

@@ -45,7 +45,6 @@ const page = () => {
               "Our professional crew ensures a safe and enjoyable ride so you can focus on celebrating without worry.",
           },
         ]}
-        src="/stage-bus.jpeg"
       />
       <ColumnSplit
         contents={[
@@ -69,7 +68,6 @@ const page = () => {
           },
         ]}
         reverse
-        src="/stage-bus.jpeg"
       />
 
       <Column

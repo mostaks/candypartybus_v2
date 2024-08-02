@@ -29,7 +29,6 @@ const page = () => {
               "We believe that every event, regardless of size, deserves the Candy Party Bus touch. Our commitment to quality isn’t just about flashy lights and booming sound systems—it’s about ensuring that your vision becomes a reality. We sweat the details so that your celebration is exactly as you’ve dreamed, and perhaps even more.",
           },
         ]}
-        src="/stage-bus.jpeg"
       />
       <Column
         title="Customer Satisfaction"

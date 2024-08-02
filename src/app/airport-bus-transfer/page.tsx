@@ -39,7 +39,6 @@ const page = () => {
               "Expect professionalism from our experienced drivers, who prioritize your safety and comfort throughout your transfer.",
           },
         ]}
-        src="/stage-bus.jpeg"
       />
       <Column
         title="What Our Transfer Service Includes"
