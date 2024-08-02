@@ -263,6 +263,10 @@
         display: none;
     }
 
+    .nav {
+        gap: 5px;
+    }
+
     .background {
         justify-content: center;
     }
