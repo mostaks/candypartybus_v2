@@ -65,7 +65,7 @@ const configItems: IHeroConfig[] = [
     path: "/wedding-transportation",
     title:
       "WEDDINGS & ENGAGEMENTS: CELEBRATE LOVE IN STYLE WITH CANDY PARTY BUSES!",
-    backgroundImage: "cheers.jpg",
+    backgroundImage: "/photos/25.jpg",
     useLogo: false,
     showCTA: false,
   },
@@ -73,7 +73,7 @@ const configItems: IHeroConfig[] = [
     path: "/corporate-event-transport",
     title:
       "CORPORATE EVENTS: ELEVATE YOUR CORPORATE GATHERING WITH CANDY PARTY BUSES",
-    backgroundImage: "cool-night.jpg",
+    backgroundImage: "/photos/30.jpg",
     useLogo: false,
     showCTA: false,
   },
