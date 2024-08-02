@@ -128,4 +128,17 @@
         width: 100%;
         height: initial;
     }
+
+    .weirdShape, .weirdShapeReversed {
+        position: initial;
+    }
+
+    .title {
+        padding-top: 70px;
+    }
+
+    .body {
+        padding-top: 45px;
+        padding-bottom: 65px;
+    }
 }

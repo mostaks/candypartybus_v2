@@ -82,7 +82,7 @@ const Header = () => {
         <div ref={headerRef} className={styles.container}>
             <div className={`${isScrolled ? styles.hidden : styles.header}`}>
                 <Link href="/">
-                    <img src="/candy-logo-bus.webp" alt="Logo" className={styles.logo}/>
+                    <img src="/candy-logo-bus.png" alt="Logo" className={styles.logo}/>
                 </Link>
                 <div className={styles.headerText}>
                     Our Location

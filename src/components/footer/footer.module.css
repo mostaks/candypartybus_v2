@@ -68,3 +68,9 @@
     color: white;
     font-family: light, sans-serif;
 }
+
+@media (max-width: 768px) {
+    .background {
+        flex-direction: column;
+    }
+}
