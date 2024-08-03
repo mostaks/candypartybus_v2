@@ -35,7 +35,7 @@ const page = () => {
       <div style={{ paddingTop: 100 }} />
       <Divider
         splitSide={SplitSide.WeirdRight}
-        body="Contact us now to inquire about availability and book your preferred party bus for an '80s-themed adventure!"
+        body="Contact us now to inquire about availability and book your preferred party bus for a retro-themed adventure!"
         cta="0434 222 343"
       />
       <Footer />

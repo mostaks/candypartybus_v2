@@ -36,7 +36,7 @@ const columnSplit = ({
         <div className={styles.image}>
           <img
             src={src}
-            style={{ height: "150%", width: "150%", aspectRatio: "auto" }}
+            style={{ height: "100%", width: "100%", aspectRatio: "auto" }}
           />
         </div>
       </div>

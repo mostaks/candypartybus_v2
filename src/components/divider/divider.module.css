@@ -118,6 +118,7 @@
     text-align: center;
     align-items: center;
     display: flex;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {

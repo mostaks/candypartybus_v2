@@ -24,7 +24,7 @@ const divider = ({
           <div className={styles.weirdShapeReversed}>
             {title && <div className={styles.title}>{title}</div>}
             {body && <div className={styles.body}>{body}</div>}
-            {cta && <div className={styles.cta}>{cta}</div>}
+            {cta && <a className={styles.cta} href={`tel:${cta}`} rel="noreferrer noopener">{cta}</a>}
           </div>
           <div className={styles.bottomRow} />
         </>
@@ -33,7 +33,7 @@ const divider = ({
           <div className={styles.weirdShape}>
             {title && <div className={styles.title}>{title}</div>}
             {body && <div className={styles.body}>{body}</div>}
-            {cta && <div className={styles.cta}>{cta}</div>}
+            {cta && <a className={styles.cta} href={`tel:${cta}`} rel="noreferrer noopener">{cta}</a>}
           </div>
           <div className={styles.bottomRow} />
         </>

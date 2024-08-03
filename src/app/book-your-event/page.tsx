@@ -10,7 +10,7 @@ const page = () => {
   return (
       <main className={styles.main}>
           <Header/>
-          <Hero/>
+          <Hero />
           <Form />
           <Footer />
       </main>

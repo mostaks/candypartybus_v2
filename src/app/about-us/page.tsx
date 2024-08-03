@@ -36,7 +36,7 @@ const page = () => {
       />
       <Divider
         splitSide={SplitSide.WeirdRight}
-        body="Ready to embark on an '80s-inspired adventure? Let's plan your unforgettable party together!"
+        body="Ready to embark on a retro inspired adventure? Let's plan your unforgettable party together!"
         cta="0434 222 343"
       />
       <Footer />

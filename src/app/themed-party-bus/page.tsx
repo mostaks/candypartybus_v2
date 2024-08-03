@@ -74,7 +74,7 @@ const page = () => {
         title="What's Included in the Birthday Package?"
         dotPoints={[
           "A fully kitted party bus: Think laser lights, a killer sound system, and a spacious dance floor.",
-          "Customised playlists: Your favourite tunes set the mood for an epic celebration.",
+          "Bluetooth connectivity: Your favourite tunes set the mood for an epic celebration.",
           "Flexible routes: We'll take you where you want to go, ensuring the party never stops.",
         ]}
         description={""}
