@@ -32,7 +32,6 @@ const page = () => {
           "Whether you're seeking the grandeur of our forthcoming 80-passenger marvel or the intimacy of our 24-seater mini-party bus, Candy Party Bus guarantees an electrifying ride for your group.",
         ]}
       />
-      <div style={{ paddingTop: 100 }} />
       <Divider
         splitSide={SplitSide.WeirdRight}
         body="Contact us now to inquire about availability and book your preferred party bus for a retro-themed adventure!"
