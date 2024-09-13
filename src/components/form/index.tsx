@@ -1,26 +1,38 @@
 "use client";
-import React, {FormEvent, ReactEventHandler, useEffect, useRef, useState} from "react";
+import React, {useEffect, useState} from "react";
 import styles from "./form.module.css";
 import {Button, Form, FormField} from "semantic-ui-react";
 import * as emailJs from 'emailjs-com';
+import * as _ from 'lodash';
 
 const form = () => {
     const [eventType, setEventType] = useState('OneWay');
     const [submitted, setSubmitted] = useState(false);
     const handleSubmit = async (e: any) => {
         try {
-            const templateParams: Record<string, unknown> = {};
             e.preventDefault();
 
-            [...e.target].forEach((item): void => {
-                templateParams[item.name] = item.value;
+            const messageStuff = [...e.target].map((item) => {
+                return {value: item.value, key: item.id};
             });
+
+            const message = messageStuff.reduce((acc, cur) => {
+                if (!cur.key || !cur.value) return acc;
+                return `${acc}\n${_.startCase(cur.key)}: ${cur.value}`;
+            }, '');
+
+            const groupedStuff = _.keyBy(messageStuff, 'key');
 
             // TODO: Chat with Jamie about setting up emailJs again
             const {text} = await emailJs.send(
                 "service_d3lnilw",
                 "template_l6yrbv3",
-                templateParams,
+                {
+                    from_name: groupedStuff.firstName.value,
+                    reply_to: groupedStuff.email.value,
+                    to_name: 'Jamie',
+                    message
+                },
                 "user_zR874qWdWi7VJoA8hbPfi"
             );
 
