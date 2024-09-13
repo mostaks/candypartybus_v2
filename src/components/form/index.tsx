@@ -21,7 +21,7 @@ const form = () => {
                 "service_d3lnilw",
                 "template_l6yrbv3",
                 templateParams,
-                "user_zR874qWdWi7VJoA8hbPfi "
+                "user_zR874qWdWi7VJoA8hbPfi"
             );
 
             setSubmitted(text === 'OK');
