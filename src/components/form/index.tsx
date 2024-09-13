@@ -13,7 +13,7 @@ const form = () => {
             e.preventDefault();
 
             const messageStuff = [...e.target].map((item) => {
-                return {value: item.value, key: item.id};
+                return { value: item.value, key: item.name };
             });
 
             const message = messageStuff.reduce((acc, cur) => {
