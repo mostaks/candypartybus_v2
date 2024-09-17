@@ -35,7 +35,7 @@ const configItems: IHeroConfig[] = [
     {
         path: "/book-your-event",
         title: "BOOK YOUR NEXT PARTY WITH CANDY PARTY BUS",
-        backgroundImage: "book.jpg",
+        backgroundImage: "/photos/17.jpg",
         useLogo: false,
         showCTA: false,
     },
@@ -117,59 +117,74 @@ const Hero = () => {
     return (
         <>
             {path === '/book-your-event' ? (
-                <video className={styles.backgroundVideo} autoPlay muted loop poster="/home/hero-3.jpg">
-                    <source src="/bookingVideo.mov" type="video/mp4" />
-                </video>
-            ) : <div
-                className={styles.container}
-                style={{
-                    backgroundImage:
-                        path === "/"
-                            ? `url(${images[currentImageIndex]})`
-                            : `url(${config?.backgroundImage})`,
-                    backgroundSize: "cover", // Add this line to prevent image stretching
-                    backgroundPosition: "center", // Add this line to center the image
-                }}
-            >
-                <div className={styles.overlay}></div>
-                <div className={styles.content}>
-                    {config?.useLogo && (
-                        <>
-                            <img
-                                style={{
-                                    width: "20%",
-                                    marginTop: 60,
-                                    marginBottom: 20,
-                                }}
-                                src={"/palm-trees.svg"}
-                            />
-                        </>
-                    )}
+                <>
+                    <video className={styles.backgroundVideo} loop autoPlay controls poster="/home/hero-3.jpg">
+                        <source src="/bookingVideo.mov" type="video/mp4"/>
+                    </video>
+                    <div
+                        className={`${styles.container} ${styles.bookingContainer}`}
+                        style={{
+                            backgroundImage: `url(${config?.backgroundImage})`,
+                            backgroundSize: "cover", // Add this line to prevent image stretching
+                            backgroundPosition: "center", // Add this line to center the image
+                        }}
+                    >
+                        <div className={styles.overlay}></div>
+                    </div>
+                </>
+            ) : (
+                <div
+                    className={styles.container}
+                    style={{
+                        backgroundImage:
+                            path === "/"
+                                ? `url(${images[currentImageIndex]})`
+                                : `url(${config?.backgroundImage})`,
+                        backgroundSize: "cover", // Add this line to prevent image stretching
+                        backgroundPosition: "center", // Add this line to center the image
+                    }}
+                >
+                    <div className={styles.overlay}></div>
+                    <div className={styles.content}>
+                        {config?.useLogo && (
+                            <>
+                                <img
+                                    alt="palm trees"
+                                    style={{
+                                        width: "20%",
+                                        marginTop: 60,
+                                        marginBottom: 20,
+                                    }}
+                                    src={"/palm-trees.svg"}
+                                />
+                            </>
+                        )}
 
-                    {path === "/" ? (
-                        <>
-                            <div className={styles.title}>WELCOME TO CANDY PARTY BUS:</div>
-                            <div className={styles.subtitle}>
-                                <span>YOUR </span>
-                                <span style={{color: "rgb(70, 197, 231)"}}>RETRO </span>
-                                <span>RIDE TO EPIC MEMORIES!</span>
-                            </div>
-                        </>
-                    ) : (
-                        <>
-                            <div className={styles.subtitle}>{config?.title}</div>
-                        </>
-                    )}
+                        {path === "/" ? (
+                            <>
+                                <div className={styles.title}>WELCOME TO CANDY PARTY BUS:</div>
+                                <div className={styles.subtitle}>
+                                    <span>YOUR </span>
+                                    <span style={{color: "rgb(70, 197, 231)"}}>RETRO </span>
+                                    <span>RIDE TO EPIC MEMORIES!</span>
+                                </div>
+                            </>
+                        ) : (
+                            <>
+                                <div className={styles.subtitle}>{config?.title}</div>
+                            </>
+                        )}
 
-                    {config?.showCTA && (
-                        <>
-                            <a href="/book-your-event" className={styles.button}>
-                                <b>All Aboard the Candy Party Bus Express!</b>
-                            </a>
-                        </>
-                    )}
+                        {config?.showCTA && (
+                            <>
+                                <a href="/book-your-event" className={styles.button}>
+                                    <b>All Aboard the Candy Party Bus Express!</b>
+                                </a>
+                            </>
+                        )}
+                    </div>
                 </div>
-            </div>
+            )
             }
         </>
     )

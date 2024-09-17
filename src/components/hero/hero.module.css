@@ -24,7 +24,12 @@
     text-align: center;
 }
 
+.bookingContainer {
+    display: none;
+}
+
 .backgroundVideo {
+    margin-top: -200px;
     width: 100vw;
     height: 100vh;
     object-fit: cover;
@@ -90,6 +95,15 @@
 @media (max-width: 768px) {
     .subtitle {
         font-size: 4rem;
+    }
+
+    .backgroundVideo {
+        display: none;
+    }
+
+    .bookingContainer {
+        display: flex;
+        height: 60vh;
     }
 
     .content {

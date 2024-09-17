@@ -83,7 +83,7 @@ const form = () => {
                             <option value="Other">Other</option>
                         </select>
                     </FormField>
-                    {eventType === 'DriveAround' ? (
+                    {eventType === 'DriveAround' && (
                         <>
                             <FormField
                                 className={`${styles.formGroup} ${styles.loc1}`}>
@@ -92,18 +92,19 @@ const form = () => {
                             </FormField>
                             <FormField className={`${styles.formGroup} ${styles.loc1Time}`}>
                                 <label htmlFor="loc1Time">First Departure Time</label>
-                                <input id="loc1Time" name="First Departure Time" type="time" required/>
+                                <input id="loc1Time" name="First Departure Time" type="time" step="900" required/>
                             </FormField>
-                            <FormField className={`${styles.formGroup} ${styles.loc4}`}>
-                                <label htmlFor="loc4">Second Arrival Location</label>
-                                <input id="loc4" name="Second Arrival Location" required/>
+                            <FormField className={`${styles.formGroup} ${styles.loc3}`}>
+                                <label htmlFor="loc4">Final Arrival Location</label>
+                                <input id="loc4" name="Final Arrival Location" required/>
                             </FormField>
-                            <FormField className={`${styles.formGroup} ${styles.loc1}`}>
-                                <label htmlFor="loc5">Second Arrival Time</label>
-                                <input id="loc5" name="Second Arrival Time" />
+                            <FormField className={`${styles.formGroup} ${styles.loc3Time}`}>
+                                <label htmlFor="loc5">Final Arrival Time</label>
+                                <input id="loc5" name="Final Arrival Time" type="time" step="900" required />
                             </FormField>
                         </>
-                    ) : (
+                    )}
+                    {eventType === 'OneWay' && (
                         <>
                             <FormField
                                 className={`${styles.formGroup} ${styles.loc1}`}>
@@ -112,7 +113,24 @@ const form = () => {
                             </FormField>
                             <FormField className={`${styles.formGroup} ${styles.loc1Time}`}>
                                 <label htmlFor="loc1Time">First Departure Time</label>
-                                <input id="loc1Time" name="First Departure Time" type="time" required/>
+                                <input id="loc1Time" name="First Departure Time" type="time" step="900" required/>
+                            </FormField>
+                            <FormField className={`${styles.formGroup} ${styles.loc2}`}>
+                                <label htmlFor="loc2">First Arrival Location</label>
+                                <input id="loc2" name="First Arrival Location" required/>
+                            </FormField>
+                        </>
+                    )}
+                    {(eventType === 'Return' || eventType === 'Other') && (
+                        <>
+                            <FormField
+                                className={`${styles.formGroup} ${styles.loc1}`}>
+                                <label htmlFor="loc1">First Departure Location</label>
+                                <input id="loc1" name="First Departure Location" required/>
+                            </FormField>
+                            <FormField className={`${styles.formGroup} ${styles.loc1Time}`}>
+                                <label htmlFor="loc1Time">First Departure Time</label>
+                                <input id="loc1Time" name="First Departure Time" type="time" step="900" required/>
                             </FormField>
                             <FormField className={`${styles.formGroup} ${styles.loc2}`}>
                                 <label htmlFor="loc2">First Arrival Location</label>
@@ -124,7 +142,7 @@ const form = () => {
                             </FormField>
                             <FormField className={`${styles.formGroup} ${styles.loc3Time}`}>
                                 <label htmlFor="loc3Time">Second Departure Time</label>
-                                <input id="loc3Time" name="Second Departure Time" type="time" required/>
+                                <input id="loc3Time" name="Second Departure Time" type="time" step="900" required/>
                             </FormField>
                             <FormField className={`${styles.formGroup} ${styles.loc4}`}>
                                 <label htmlFor="loc4">Second Arrival Location</label>
@@ -132,6 +150,7 @@ const form = () => {
                             </FormField>
                         </>
                     )}
+
                     <FormField className={`${styles.formGroup} ${styles.message}`}>
                         <label htmlFor="message">Additional Details For Your Trip</label>
                         <textarea id="message" name="Additional Details For Your Trip" rows={4}></textarea>
