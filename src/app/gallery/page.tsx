@@ -9,11 +9,19 @@ import "react-image-gallery/styles/css/image-gallery.css";
 let images = [];
 
 for (var i = 3; i <= 31; i++) {
-    if (i === 14 || i === 13 || i === 18 || i === 29) continue;
-    images.push({
-        original: `/photos/${i}.jpg`,
-        thumbnail: `/photos/${i}.jpg`,
-    });
+    switch (i) {
+        case 14:
+        case 13:
+        case 18:
+        case 29:
+            continue;
+        default:
+            images.push({
+                original: `/photos/${i}.jpg`,
+                thumbnail: `/photos/${i}.jpg`,
+            });
+            break;
+    }
 }
 
 const page = () => {
