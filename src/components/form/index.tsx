@@ -13,7 +13,8 @@ const form = () => {
             e.preventDefault();
 
             const messageStuff = [...e.target].map((item) => {
-                return { value: item.value, key: item.name };
+                const value = item.id === 'eventDate' ? new Date(item.value).toLocaleDateString() : item.value;
+                return { key: item.name, value };
             });
 
             const message = messageStuff.reduce((acc, cur) => {

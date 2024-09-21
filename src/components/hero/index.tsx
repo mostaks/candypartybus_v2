@@ -119,7 +119,7 @@ const Hero = () => {
             {path === '/book-your-event' ? (
                 <>
                     <video className={styles.backgroundVideo} loop autoPlay controls poster="/home/hero-3.jpg">
-                        <source src="/bookingVideo.mov" type="video/mp4"/>
+                        <source src="/bookingVideo.mov" type="video/mp4" className={styles.video}/>
                     </video>
                     <div
                         className={`${styles.container} ${styles.bookingContainer}`}
