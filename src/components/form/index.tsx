@@ -42,10 +42,6 @@ const form = () => {
         }
     };
 
-    useEffect(() => {
-        console.log(eventType)
-    }, [eventType]);
-
     return (
         <div className={styles.container}>
             <div className={styles.background}>
