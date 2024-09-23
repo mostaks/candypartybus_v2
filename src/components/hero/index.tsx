@@ -2,6 +2,8 @@
 import React, {useEffect, useState} from "react";
 import styles from "./hero.module.css";
 import {usePathname} from "next/navigation";
+import {useWindowSize} from "@uidotdev/usehooks";
+
 
 const images = [
     "/home/hero-1.jpg",
@@ -105,6 +107,7 @@ const Hero = () => {
     const path = usePathname();
 
     const config = configItems.find((x) => x.path === path);
+    const { width } = useWindowSize();
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -114,13 +117,17 @@ const Hero = () => {
         return () => clearInterval(interval);
     }, []);
 
+    console.log("width", width)
+
     return (
         <>
             {path === '/book-your-event' ? (
                 <>
-                    <video className={styles.backgroundVideo} loop autoPlay controls poster="/home/hero-3.jpg">
-                        <source src="/bookingVideo.mov" type="video/mp4" className={styles.video}/>
-                    </video>
+                    {width && width > 768 ? (
+                        <video className={styles.backgroundVideo} loop autoPlay controls poster="/home/hero-3.jpg">
+                            <source src="/bookingVideo.mov" type="video/mp4" className={styles.video}/>
+                        </video>
+                    ) : <></> }
                     <div
                         className={`${styles.container} ${styles.bookingContainer}`}
                         style={{
